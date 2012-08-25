@@ -1,0 +1,520 @@
+"Id","Label","Score","Rank","Age","Profession","Spouses","Dated","Total","Spouses1400","Dated1400","Total1400","p1400"
+"p1","Will Smith",10,1,43,"Actor, Composer, Director, Producer, Rapper, Writer",2,3,5,1,1,2,40
+"p2","Johnny Depp",9.89,2,49,"Actor, Director, Producer, Singer (Cameo), Writer",2,4,6,0,1,1,16.7
+"p3","Leonardo DiCaprio",9.89,2,37,"Actor, Producer, Writer",0,18,18,0,5,5,27.8
+"p4","Angelina Jolie",9.89,2,37,"Actress, Director, Producer, Singer (Cameo)",3,8,11,3,5,8,72.7
+"p5","Brad Pitt",9.89,2,48,"Actor, Producer",2,15,17,2,9,11,64.7
+"p6","Tom Hanks",9.87,6,56,"Actor, Director, Producer, Singer (Cameo), Writer",2,0,2,1,0,1,50
+"p7","George Clooney",9.81,7,51,"Actor, Director, Producer, Writer",1,15,16,0,7,7,43.8
+"p8","Denzel Washington",9.76,8,57,"Actor",1,2,3,0,1,1,33.3
+"p9","Matt Damon",9.69,9,41,"Actor, Producer, Singer (Cameo), Writer",1,7,8,0,4,4,50
+"p10","Jack Nicholson",9.68,10,75,"Actor, Director, Producer, Singer (Cameo), Writer",1,14,15,0,3,3,20
+"p11","Julia Roberts",9.65,11,44,"Actress, Producer",2,11,13,0,9,9,69.2
+"p12","Adam Sandler",9.61,12,45,"Actor, Composer, Producer, Singer (Cameo), Writer",1,4,5,0,2,2,40
+"p13","Tom Cruise",9.6,13,50,"Actor, Director, Producer, Writer",3,7,10,3,3,6,60
+"p14","Russell Crowe",9.57,14,48,"Actor, Director, Musician, Producer, Singer, Writer",1,8,9,0,5,5,55.6
+"p15","Ben Stiller",9.5,18,46,"Actor, Director, Producer, Writer",1,6,7,1,5,6,85.7
+"p16","Jim Carrey",9.42,19,50,"Actor, Producer, Singer (Cameo), Writer",2,7,9,1,3,4,44.4
+"p17","Clint Eastwood",9.33,20,82,"Actor, Composer, Director, Producer, Writer",3,0,3,1,0,1,33.3
+"p18","Robert Downey Jr.",9.29,21,47,"Actor, Producer, Singer (Cameo), Writer",2,5,7,0,3,3,42.9
+"p19","Nicole Kidman",9.27,22,45,"Actress, Producer, Singer (Cameo)",2,11,13,1,5,6,46.2
+"p20","Bruce Willis",9.16,23,57,"Actor, Director, Musician, Producer",2,9,11,1,4,5,45.5
+"p21","Nicolas Cage",9.02,24,48,"Actor, Director, Producer, Singer (Cameo)",4,10,14,1,3,4,28.6
+"p22","Al Pacino",9,25,72,"Actor, Director, Producer, Writer",1,8,9,1,4,5,55.6
+"p23","Harrison Ford",8.69,26,70,"Actor, Producer",3,3,6,1,3,4,66.7
+"p24","Keanu Reeves",8.59,27,47,"Actor, Singer (Cameo)",0,12,12,0,6,6,50
+"p25","Christian Bale",8.49,29,38,"Actor, Producer, Singer (Cameo)",1,1,2,0,1,1,50
+"p26","Tobey Maguire",8.48,30,37,"Actor, Producer",1,5,6,0,3,3,50
+"p27","John Travolta",8.47,31,58,"Actor",1,2,3,1,1,2,66.7
+"p28","Vince Vaughn",8.39,32,42,"Actor",1,3,4,0,3,3,75
+"p29","Shia LaBeouf",8.38,33,26,"Actor, Director, Producer, Singer (Cameo), Writer",0,10,10,0,4,4,40
+"p30","Reese Witherspoon",8.24,34,36,"Actress, Producer",2,5,7,1,5,6,85.7
+"p31","Daniel Day-Lewis",8.05,36,55,"Actor",2,1,3,0,1,1,33.3
+"p32","Charlize Theron",8,38,36,"Actress",1,8,9,1,6,7,77.8
+"p33","Jodie Foster",7.78,40,49,"Actor, Director, Producer, Singer (Cameo)",0,3,3,0,2,2,66.7
+"p34","Keira Knightley",7.78,40,27,"Actress, Singer (Cameo)",0,6,6,0,2,2,33.3
+"p35","Gwyneth Paltrow",7.78,40,39,"Actress, Director, Singer (Cameo), Writer",1,7,8,0,7,7,87.5
+"p36","Drew Barrymore",7.76,44,37,"Actress, Director, Producer",3,15,18,0,10,10,55.6
+"p37","Sean Penn",7.76,44,51,"Actor, Director, Producer, Writer",2,5,7,1,1,2,28.6
+"p38","Daniel Craig",7.73,46,44,"Actor, Producer, Singer (Cameo)",2,5,7,1,2,3,42.9
+"p39","Cameron Diaz",7.72,47,39,"Actress, Model, Producer, Singer (Cameo)",0,15,15,0,10,10,66.7
+"p40","Mark Wahlberg",7.68,48,41,"Actor, Producer, Rapper, Singer (Cameo)",1,12,13,0,6,6,46.2
+"p41","Eddie Murphy",7.66,49,51,"Actor, Director, Producer, Singer (Cameo), Voice (Animated project), Writer",2,6,8,0,2,2,25
+"p42","Sacha Baron Cohen",7.64,50,40,"Actor, Producer, Writer",1,1,2,1,0,1,50
+"p43","Kate Winslet",7.63,51,36,"Actress",2,4,6,0,1,1,16.7
+"p44","Jake Gyllenhaal",7.61,52,31,"Actor, Singer (Cameo)",0,5,5,0,4,4,80
+"p45","Sandra Bullock",7.6,53,47,"Actress, Director, Producer, Singer (Cameo), Writer",1,10,11,0,6,6,54.5
+"p46","Jennifer Aniston",7.58,55,43,"Actress, Producer",2,5,7,2,2,4,57.1
+"p47","Halle Berry",7.58,55,45,"Actress, Fragrance, Producer",4,10,14,1,5,6,42.9
+"p48","Matthew McConaughey",7.58,55,42,"Actor, Director, Producer, Singer (Cameo), Writer",1,11,12,0,6,6,50
+"p49","Robert Redford",7.56,59,75,"Actor",2,2,4,0,2,2,50
+"p50","Edward Norton",7.55,60,42,"Actor, Director, Producer, Singer (Cameo), Writer",0,9,9,0,7,7,77.8
+"p51","Michael Douglas",7.52,61,67,"Actor, Director, Producer",2,2,4,1,0,1,25
+"p52","Richard Gere",7.5,62,62,"Actor, Producer, Singer (Cameo)",2,2,4,0,2,2,50
+"p53","Renée Zellweger",7.5,62,43,"Actress",1,10,11,0,3,3,27.3
+"p54","Clive Owen",7.45,65,47,"Actor",1,2,3,0,2,2,66.7
+"p55","Hilary Swank",7.43,68,37,"Actress, Producer",1,3,4,0,1,1,25
+"p56","Jamie Foxx",7.42,69,44,"Actor, Composer, Director, Producer, Singer, Writer",0,4,4,0,2,2,50
+"p57","Woody Allen",7.39,70,76,"Actor, Comedian, Director, Musician, Writer",4,2,6,0,1,1,16.7
+"p58","Penélope Cruz",7.39,70,38,"Actress, Dancer, Producer, Singer (Cameo)",1,8,9,1,6,7,77.8
+"p59","Ashton Kutcher",7.37,72,34,"Actor, Model, Producer, Singer (Cameo), Writer",1,9,10,1,5,6,60
+"p60","Ben Affleck",7.34,77,39,"Actor, Director, Producer, Writer",1,11,12,1,7,8,66.7
+"p61","Scarlett Johansson",7.34,77,27,"Actress, Director, Singer (Cameo)",1,7,8,1,6,7,87.5
+"p62","Jude Law",7.29,79,39,"Actor, Director, Producer, Singer (Cameo)",1,9,10,0,4,4,40
+"p63","Colin Farrell",7.27,80,36,"Actor, Singer (Cameo)",3,14,17,0,8,8,47.1
+"p64","Anne Hathaway",7.27,80,29,"Actress, Singer (Cameo)",0,6,6,0,3,3,50
+"p65","Kate Hudson",7.27,80,33,"Actress, Director, Producer, Singer (Cameo), Writer",2,6,8,0,3,3,37.5
+"p66","Natalie Portman",7.27,80,31,"Actress, Director, Producer, Singer (Cameo), Writer",1,10,11,0,5,5,45.5
+"p67","Owen Wilson",7.24,85,43,"Actor",0,7,7,0,3,3,42.9
+"p68","Catherine Zeta-Jones",7.24,85,42,"Actress",1,4,5,1,1,2,40
+"p69","Steve Martin",7.17,93,66,"Actor, Director, Producer, Singer (Cameo), Writer",2,6,8,0,2,2,25
+"p70","Javier Bardem",7.16,94,43,"Actor, Producer",1,2,3,1,1,2,66.7
+"p71","Helen Mirren",7.15,96,67,"Actress, Director, Producer, Singer (Cameo)",1,1,2,0,1,1,50
+"p72","Kevin Spacey",7.15,96,62,"Actor",0,3,3,0,1,1,33.3
+"p73","Jennifer Lopez",7.14,98,43,"Actress, Musician, Producer",3,2,5,0,2,2,40
+"p74","Uma Thurman",7.14,98,42,"Actress",2,8,10,2,5,7,70
+"p75","Naomi Watts",7.13,100,43,"Actress",1,3,4,1,2,3,75
+"p76","Kevin Costner",7.11,101,57,"Actor, Director, Musician, Producer, Singer",2,8,10,0,3,3,30
+"p77","Eric Bana",7.08,102,43,"Actor, Producer, Writer",1,1,2,0,1,1,50
+"p78","Sarah Jessica Parker",7.06,103,47,"Actress, Producer, Singer (Cameo)",1,4,5,1,2,3,60
+"p79","Joaquin Phoenix",7.01,104,37,"Actor, Musician, Producer, Rapper",0,9,9,0,4,4,44.4
+"p80","John Cusack",6.98,106,46,"Actor, Producer, Writer",0,15,15,0,8,8,53.3
+"p81","Jessica Alba",6.97,108,31,"Actress",2,6,8,0,4,4,50
+"p82","Michelle Pfeiffer",6.97,108,54,"Actress, Producer, Singer (Cameo)",3,5,8,0,4,4,50
+"p83","Demi Moore",6.94,110,49,"Actress, Director, Producer, Singer (Cameo)",3,9,12,2,6,8,66.7
+"p84","Dennis Quaid",6.93,111,58,"Actor, Director, Producer, Singer (Cameo), Writer",3,5,8,1,1,2,25
+"p85","Sylvester Stallone",6.93,111,66,"Actor",3,10,13,0,1,1,7.7
+"p86","Kate Beckinsale",6.88,114,39,"Actress",2,3,5,1,2,3,60
+"p87","Jennifer Garner",6.88,114,40,"Actress, Director, Producer",2,1,3,1,1,2,66.7
+"p88","Rachel Weisz",6.88,114,41,"Actress",2,0,2,1,0,1,50
+"p89","Katherine Heigl",6.86,118,33,"Actress, Producer",1,2,3,0,1,1,33.3
+"p90","Liam Neeson",6.82,120,60,"Actor",1,7,8,0,4,4,50
+"p91","Rachel McAdams",6.8,121,33,"Actress, Singer (Cameo)",1,4,5,1,3,4,80
+"p92","Martin Lawrence",6.79,122,47,"Actor, Director, Producer, Singer (Cameo), Writer",2,2,4,0,1,1,25
+"p93","Salma Hayek",6.75,123,45,"Actress, Director, Producer, Singer (Cameo)",1,7,8,0,4,4,50
+"p94","Jennifer Connelly",6.74,124,41,"Actress",2,2,4,1,1,2,50
+"p95","Emma Thompson",6.67,126,53,"Actress",2,1,3,1,1,2,66.7
+"p96","Antonio Banderas",6.66,127,51,"Actor, Director, Musician, Producer, Voice (Animated project)",2,3,5,1,1,2,40
+"p97","Orlando Bloom",6.65,128,35,"Actor, Producer",1,5,6,0,4,4,66.7
+"p98","Susan Sarandon",6.65,128,65,"Actress, Producer, Singer (Cameo)",2,9,11,1,5,6,54.5
+"p99","Kiefer Sutherland",6.64,130,45,"Actor",2,8,10,0,2,2,20
+"p101","Billy Bob Thornton",6.6,132,56,"Actor, Musician, Writer",6,0,6,1,0,1,16.7
+"p102","Ice Cube",6.57,134,43,"Actor, Composer, Director, Producer, Rapper, Singer (Cameo), Writer",1,1,2,0,1,1,50
+"p103","Benicio del Toro",6.57,134,45,"Actor, Director, Producer, Writer",0,4,4,0,3,3,75
+"p104","Kirsten Dunst",6.57,134,30,"Actress, Director, Singer (Cameo), Writer",0,11,11,0,9,9,81.8
+"p105","Diane Lane",6.57,134,47,"Actress",2,8,10,2,6,8,80
+"p106","Vin Diesel",6.56,138,45,"Actor, Director, Producer, Writer",0,11,11,0,3,3,27.3
+"p107","Josh Brolin",6.49,142,44,"Actor, Director, Producer, Writer",2,1,3,1,1,2,66.7
+"p108","Ethan Hawke",6.37,145,41,"Actor, Director, Singer (Cameo), Writer",2,3,5,1,1,2,40
+"p109","Matthew Broderick",6.36,146,50,"Actor, Director, Producer, Singer (Cameo), Stage Performer (Musical), Writer",1,4,5,1,2,3,60
+"p110","Diane Keaton",6.34,147,66,"Actress, Director, Producer, Singer (Cameo), Writer",0,4,4,0,4,4,100
+"p111","Ryan Gosling",6.32,149,31,"Actor, Musician, Producer",0,4,4,0,4,4,100
+"p112","Jessica Biel",6.31,150,30,"Actress, Producer",0,10,10,0,6,6,60
+"p113","Annette Bening",6.29,151,54,"Actress",2,0,2,1,0,1,50
+"p114","Glenn Close",6.28,152,65,"Actress, Producer, Singer (Cameo), Stage Performer (Musical), Stage Performer (Play)",5,9,14,0,3,3,21.4
+"p115","Lindsay Lohan",6.26,153,26,"Actress, Model, Musician",0,18,18,0,2,2,11.1
+"p116","Ralph Fiennes",6.25,154,49,"Actor, Director, Producer, Singer (Cameo)",2,3,5,1,2,3,60
+"p117","Meg Ryan",6.24,155,50,"Actress, Producer, Singer (Cameo)",2,13,15,1,10,11,73.3
+"p119","Aaron Eckhart",6.09,162,44,"Actor, Producer",0,3,3,0,1,1,33.3
+"p120","Kurt Russell",6.09,162,61,"Actor",2,0,2,1,0,1,50
+"p121","Adrien Brody",6.05,167,39,"Actor, Composer, Producer",0,5,5,0,1,1,20
+"p122","Daniel Radcliffe",6.03,168,23,"Actor",0,4,4,0,1,1,25
+"p123","Ashley Judd",6.01,169,44,"Actress, Singer (Cameo)",1,4,5,0,2,2,40
+"p124","Warren Beatty",6,170,75,"Actor, Director, Producer, Writer",2,10,12,1,2,3,25
+"p125","Christopher Walken",6,170,69,"Actor",1,2,3,0,1,1,33.3
+"p126","Kevin Kline",5.97,172,64,"Actor, Director, Singer (Cameo)",1,5,6,0,3,3,50
+"p128","Woody Harrelson",5.95,174,51,"Actor, Singer (Cameo)",2,4,6,0,2,2,33.3
+"p129","Laura Linney",5.94,176,48,"Actress",2,1,3,0,1,1,33.3
+"p130","Jeff Bridges",5.93,177,62,"Actor, Composer, Producer, Singer (Cameo)",1,3,4,0,2,2,50
+"p131","Luke Wilson",5.9,179,40,"Actor",0,4,4,0,3,3,75
+"p132","Justin Timberlake",5.87,180,31,"Actor, Musician, Singer",0,12,12,0,6,6,50
+"p133","Sienna Miller",5.84,181,30,"Actress",0,14,14,0,10,10,71.4
+"p135","John Malkovich",5.79,183,58,"Actor, Director, Producer, Writer",2,1,3,0,1,1,33.3
+"p136","Gary Oldman",5.74,184,54,"Actor, Director, Producer, Singer (Cameo), Writer",5,1,6,2,0,2,33.3
+"p137","Gael García Bernal",5.7,188,33,"Actor, Director, Producer, Writer",1,1,2,0,1,1,50
+"p140","Terrence Howard",5.66,193,43,"Actor, Producer, Singer (Cameo)",2,8,10,0,3,3,30
+"p141","Jonathan Rhys Meyers",5.61,196,34,"Actor, Singer (Cameo)",0,9,9,0,3,3,33.3
+"p143","Alec Baldwin",5.57,199,54,"Actor, Director, Producer, Writer",2,7,9,1,1,2,22.2
+"p145","Liev Schreiber",5.57,199,44,"Actor, Director, Writer",1,4,5,1,1,2,40
+"p146","Kenneth Branagh",5.54,202,51,"Actor, Director, Producer, Singer (Cameo), Writer",2,1,3,1,1,2,66.7
+"p147","James Franco",5.54,202,34,"Actor, Director, Producer, Singer (Cameo), Writer",0,7,7,0,2,2,28.6
+"p148","Ryan Reynolds",5.47,206,35,"Actor",1,5,6,1,3,4,66.7
+"p149","Liv Tyler",5.47,206,35,"Actress",1,7,8,0,3,3,37.5
+"p150","Beyoncé",5.45,210,30,"Actress, Composer, Producer, Singer",1,6,7,0,2,2,28.6
+"p151","Barbra Streisand",5.42,211,70,"Actress, Director, Producer",2,11,13,2,2,4,30.8
+"p152","Ryan Phillippe",5.41,212,37,"Actor",1,4,5,1,4,5,100
+"p153","Christina Ricci",5.39,213,32,"Actress, Producer, Singer (Cameo)",0,6,6,0,3,3,50
+"p154","Peter Sarsgaard",5.37,214,41,"Actor",1,2,3,1,0,1,33.3
+"p155","Emile Hirsch",5.36,215,27,"Actor, Singer (Cameo)",0,3,3,0,2,2,66.7
+"p156","Josh Hartnett",5.29,217,34,"Actor, Producer",0,12,12,0,7,7,58.3
+"p157","Charlie Sheen",5.26,218,46,"Actor, Producer, Writer",5,17,22,2,1,3,13.6
+"p158","Paul Rudd",5.24,219,43,"Actor, Producer, Singer (Cameo), Writer",1,1,2,0,1,1,50
+"p159","Emily Blunt",5.23,220,29,"Actress",2,0,2,1,0,1,50
+"p160","Eva Mendes",5.23,220,38,"Actress, Producer",1,2,3,0,1,1,33.3
+"p161","William H. Macy",5.2,223,62,"Actor, Director, Producer, Writer",1,1,2,1,0,1,50
+"p162","Matt Dillon",5.18,226,48,"Actor, Director, Writer",0,11,11,0,8,8,72.7
+"p163","Robin Wright",5.17,227,46,"Actress",2,4,6,1,4,5,83.3
+"p164","Zach Braff",5.16,230,37,"Actor, Director, Producer, Writer",0,7,7,0,4,4,57.1
+"p165","Hilary Duff",5.16,230,24,"Actress, Producer, Singer",1,8,9,0,2,2,22.2
+"p167","Helen Hunt",5.15,232,49,"Actress, Director, Producer, Writer",2,3,5,1,3,4,80
+"p168","Edward Burns",5.12,235,44,"Actor, Director, Producer, Writer",1,4,5,0,3,3,60
+"p169","Hayden Christensen",5.12,235,31,"Actor, Producer",1,6,7,1,3,4,57.1
+"p170","Topher Grace",5.12,235,34,"Actor, Producer, Singer (Cameo), Writer",0,10,10,0,7,7,70
+"p171","Juliette Binoche",5.1,239,48,"Actress",5,0,5,1,0,1,20
+"p172","Claire Danes",5.1,239,33,"Actress",1,6,7,1,4,5,71.4
+"p173","Elijah Wood",5.1,239,31,"Actor",0,3,3,0,2,2,66.7
+"p174","Goldie Hawn",5.08,245,66,"Actor, Director, Producer, Singer (Cameo)",3,2,5,1,1,2,40
+"p175","Katie Holmes",5.08,245,33,"Actress",1,5,6,1,5,6,100
+"p176","Mandy Moore",5.08,245,28,"Actress, Singer",1,7,8,0,2,2,25
+"p177","Billy Crudup",5.05,249,44,"Actor, Stage Performer (Play)",1,3,4,1,2,3,75
+"p178","Kim Basinger",5.03,253,58,"Actress",2,6,8,1,3,4,50
+"p180","Kate Bosworth",4.98,258,29,"Actress",0,3,3,0,1,1,33.3
+"p181","Amanda Bynes",4.98,258,26,"Actress, Singer (Cameo)",0,10,10,0,2,2,20
+"p182","Djimon Hounsou",4.98,258,48,"Actor",1,2,3,0,1,1,33.3
+"p183","Jason Schwartzman",4.98,258,32,"Actor, Musician, Singer (Cameo), Writer",1,2,3,0,2,2,66.7
+"p184","Sarah Michelle Gellar",4.94,267,35,"Actress, Singer (Cameo)",1,3,4,1,2,3,75
+"p185","Helena Bonham Carter",4.93,268,46,"Actor, Singer (Cameo), Voice (Animated project)",1,3,4,0,3,3,75
+"p186","Dane Cook",4.93,268,40,"Actor, Comedian, Director, Producer, Writer",0,2,2,0,1,1,50
+"p187","Hugh Laurie",4.93,268,53,"Actor, Composer, Director, Producer, Singer (Cameo), Writer",1,1,2,0,1,1,50
+"p188","Damon Wayans",4.92,272,51,"Actor",1,1,2,0,1,1,50
+"p189","Paul Bettany",4.9,274,41,"Actor",1,2,3,1,1,2,66.7
+"p190","Jessica Lange",4.9,274,63,"Actress, Producer",4,1,5,1,1,2,40
+"p191","Eva Longoria",4.9,274,37,"Actress, Producer",2,5,7,0,1,1,14.3
+"p193","David Duchovny",4.84,281,51,"Actor, Director, Producer, Writer",1,8,9,1,3,4,44.4
+"p194","Michael Keaton",4.84,281,60,"Actor, Director, Producer",2,2,4,1,1,2,50
+"p195","Nick Nolte",4.84,281,71,"Actor, Producer",6,1,7,0,1,1,14.3
+"p197","William Hurt",4.83,285,62,"Actor, Producer",5,1,6,1,1,2,33.3
+"p198","Channing Tatum",4.83,285,32,"Actor",1,1,2,1,0,1,50
+"p199","Willem Dafoe",4.82,290,57,"Actor, Producer, Writer",2,1,3,0,1,1,33.3
+"p201","Selma Blair",4.8,297,40,"Actress",2,4,6,0,2,2,33.3
+"p202","Rosario Dawson",4.8,297,33,"Actor, Producer, Singer (Cameo)",0,7,7,0,4,4,57.1
+"p203","Anjelica Huston",4.79,302,61,"Actress, Director, Producer",1,1,2,0,1,1,50
+"p204","Keri Russell",4.79,302,36,"Actress, Singer (Cameo)",1,3,4,0,1,1,25
+"p205","Catherine Deneuve",4.77,308,68,"Actress, Producer, Singer (Cameo)",2,6,8,0,1,1,12.5
+"p206","Josh Lucas",4.76,310,41,"Actor, Producer, Singer (Cameo)",1,8,9,0,5,5,55.6
+"p207","Sam Rockwell",4.75,311,43,"Actor",0,2,2,0,2,2,100
+"p208","Toni Collette",4.74,313,39,"Actress, Producer, Singer (Cameo)",1,2,3,0,1,1,33.3
+"p209","Gabriel Byrne",4.73,316,62,"Actor, Director, Producer, Writer",1,2,3,1,1,2,66.7
+"p210","Seann William Scott",4.73,316,35,"Actor, Producer",0,2,2,0,1,1,50
+"p211","Justin Long",4.72,318,34,"Actor, Singer (Cameo)",0,6,6,0,5,5,83.3
+"p212","Sharon Stone",4.72,318,54,"Actress",2,14,16,0,3,3,18.8
+"p213","Lucy Liu",4.7,322,43,"Actress, Producer, Singer (Cameo)",0,2,2,0,1,1,50
+"p214","Mary-Louise Parker",4.68,326,47,"Actress, Singer (Cameo)",2,5,7,2,2,4,57.1
+"p215","Monica Bellucci",4.65,332,47,"Actress, Model",2,0,2,1,0,1,50
+"p216","Catherine Keener",4.65,332,53,"Actress, Producer",1,1,2,1,1,2,100
+"p217","Harvey Keitel",4.65,332,73,"Actress, Producer",2,1,3,0,1,1,33.3
+"p218","Winona Ryder",4.65,332,40,"Actress, Producer, Singer (Cameo)",0,12,12,0,6,6,50
+"p219","Julia Stiles",4.65,332,31,"Actress",0,5,5,0,3,3,60
+"p220","Paul Walker",4.65,332,38,"Actor",0,5,5,0,3,3,60
+"p221","Courteney Cox",4.64,341,48,"Actress, Director, Producer",2,5,7,2,3,5,71.4
+"p223","Amanda Peet",4.62,344,40,"Actress",1,3,4,0,2,2,50
+"p224","Megan Fox",4.61,346,26,"Actress",1,2,3,0,1,1,33.3
+"p225","Val Kilmer",4.61,346,52,"Actor, Director, Producer, Singer (Cameo)",1,9,10,1,6,7,70
+"p226","Mickey Rourke",4.61,346,55,"Actor, Singer (Cameo), Writer",2,5,7,0,3,3,42.9
+"p227","Wesley Snipes",4.61,346,49,"Actor, Producer",2,4,6,0,4,4,66.7
+"p228","Jane Fonda",4.57,353,74,"Actress, Producer",3,10,13,0,3,3,23.1
+"p229","50 Cent",4.57,353,37,"Actor, Director, Musician, Producer, Rapper, Writer",1,10,11,0,3,3,27.3
+"p230","Jason Biggs",4.56,356,34,"Actor, Producer",1,2,3,0,1,1,33.3
+"p231","Jason Patric",4.56,356,46,"Actor, Producer",0,5,5,0,4,4,80
+"p232","Téa Leoni",4.55,358,46,"Actress, Producer",2,0,2,1,0,1,50
+"p234","Christian Slater",4.54,360,42,"Actor",1,10,11,0,5,5,45.5
+"p236","Kyra Sedgwick",4.53,362,46,"Actress, Producer",1,1,2,1,1,2,100
+"p238","Minnie Driver",4.52,364,42,"Actress, Producer",0,7,7,0,5,5,71.4
+"p239","Jared Leto",4.52,364,40,"Actor, Musician, Producer, Singer",0,12,12,0,7,7,58.3
+"p240","Parker Posey",4.51,368,43,"Actress, Singer (Cameo), Writer",0,7,7,0,2,2,28.6
+"p241","Jason Segel",4.51,368,32,"Actor, Writer",0,2,2,0,2,2,100
+"p243","Donald Sutherland",4.5,371,77,"Actor",3,2,5,0,1,1,20
+"p244","James Marsden",4.49,373,38,"Actor, Singer (Cameo)",1,1,2,0,1,1,50
+"p245","Matthew Perry",4.49,373,42,"Actor, Director, Producer, Singer (Cameo), Writer",0,9,9,0,4,4,44.4
+"p246","John Krasinski",4.46,382,32,"Actor, Director, Singer (Cameo), Writer",1,3,4,1,3,4,100
+"p248","Carrie-Anne Moss",4.45,383,44,"Actress",1,1,2,0,1,1,50
+"p249","Vanessa Redgrave",4.43,388,75,"Actress, Producer, Singer (Cameo)",2,2,4,0,1,1,25
+"p250","Gabrielle Union",4.4,393,39,"Actress",1,6,7,0,2,2,28.6
+"p251","Evan Rachel Wood",4.4,393,24,"Actress",0,6,6,0,5,5,83.3
+"p252","James Woods",4.39,397,65,"Actor",3,11,14,0,3,3,21.4
+"p253","Sean Combs",4.38,398,42,"Actor, Director, Producer, Rapper",0,4,4,0,1,1,25
+"p254","Debra Messing",4.37,399,43,"Actress, Producer",1,1,2,0,1,1,50
+"p255","Emmy Rossum",4.35,400,25,"Actress, Singer (Cameo)",1,4,5,0,3,3,60
+"p256","Jada Pinkett Smith",4.33,403,40,"Actress, Director, Producer, Writer",1,3,4,1,1,2,50
+"p257","Rebecca Romijn",4.33,403,39,"Actress",2,3,5,1,1,2,40
+"p258","David Spade",4.31,405,48,"Actor",0,12,12,0,3,3,25
+"p259","John Leguizamo",4.3,408,48,"Actor, Director, Producer, Singer (Cameo), Writer",2,2,4,0,1,1,25
+"p260","Zooey Deschanel",4.29,410,32,"Actress, Musician",1,6,7,0,3,3,42.9
+"p261","Andie MacDowell",4.29,410,54,"Actress, Producer, Singer (Cameo)",2,3,5,0,2,2,40
+"p262","Anna Paquin",4.28,412,30,"Actor, Producer, Singer (Cameo)",1,1,2,0,1,1,50
+"p263","David Schwimmer",4.28,412,45,"Actor, Director, Producer, Singer (Cameo)",1,6,7,0,1,1,14.3
+"p264","Jimmy Smits",4.28,412,57,"Actor, Producer",2,1,3,0,1,1,33.3
+"p265","Jennifer Jason Leigh",4.24,417,50,"Actress, Director, Producer, Singer (Cameo), Writer",1,2,3,0,2,2,66.7
+"p266","Melanie Griffith",4.23,420,54,"Actress",3,1,4,3,1,4,100
+"p267","Sally Field",4.22,422,65,"Actress, Director, Producer, Singer (Cameo), Writer",2,2,4,0,2,2,50
+"p268","Thandie Newton",4.21,424,39,"Actress",1,6,7,0,3,3,42.9
+"p269","Cam Gigandet",4.19,426,29,"Actor",1,4,5,0,1,1,20
+"p270","Tyrese Gibson",4.17,429,33,"Actor, Producer",1,7,8,0,1,1,12.5
+"p271","Julia Ormond",4.15,433,47,"Actress, Producer",2,2,4,0,2,2,50
+"p272","Chloë Sevigny",4.15,433,37,"Actress",0,4,4,0,1,1,25
+"p273","Hayden Panettiere",4.14,436,22,"Actress, Singer (Cameo)",0,5,5,0,1,1,20
+"p274","Mila Kunis",4.12,440,28,"Actor, Singer (Cameo)",0,3,3,0,3,3,100
+"p275","Rose McGowan",4.1,442,38,"Actress, Singer (Cameo)",2,7,9,0,3,3,33.3
+"p276","Mira Sorvino",4.1,442,44,"Actress",1,5,6,0,3,3,50
+"p277","Heather Graham",4.06,447,42,"Actor, Producer, Singer (Cameo)",0,14,14,0,8,8,57.1
+"p278","Seth Green",4.05,448,38,"Actor, Director, Producer, Writer",1,4,5,0,2,2,40
+"p279","Julie Christie",4.04,450,71,"Actress",1,1,2,0,1,1,50
+"p280","Joseph Gordon-Levitt",4.04,450,31,"Actor",0,4,4,0,3,3,75
+"p281","Laura Dern",4.02,454,45,"Actress, Director, Producer",1,1,2,0,1,1,50
+"p282","Isabella Rossellini",4.02,454,60,"Actress",4,1,5,1,0,1,20
+"p283","Emma Watson",4.02,454,22,"Actress",0,6,6,0,1,1,16.7
+"p285","Harry Connick, Jr.",4.01,457,44,"Actor, Composer, Musician, Producer",1,1,2,0,1,1,50
+"p286","Rachel Bilson",4,460,30,"Actress",1,1,2,1,1,2,100
+"p287","Brittany Murphy",4,460,34,"Actress, Producer, Singer (Cameo)",1,7,8,0,2,2,25
+"p288","Bradley Cooper",3.99,462,37,"Actor",1,1,2,1,1,2,100
+"p289","Jenna Fischer",3.99,462,38,"Actress, Director, Singer (Cameo), Writer",2,1,3,0,1,1,33.3
+"p290","Jessica Simpson",3.99,462,32,"Actress",2,7,9,0,2,2,22.2
+"p291","Scott Speedman",3.97,467,36,"Actor",0,5,5,0,5,5,100
+"p292","Sarah Silverman",3.96,468,41,"Actress",1,1,2,0,1,1,50
+"p293","Benjamin Bratt",3.95,471,48,"Actor, Producer",1,5,6,0,3,3,50
+"p294","Dougray Scott",3.95,471,46,"Actor, Producer",2,0,2,1,0,1,50
+"p295","Dylan McDermott",3.94,474,50,"Actor, Director",1,4,5,0,1,1,20
+"p296","Dermot Mulroney",3.94,474,48,"Actor, Musician, Producer, Singer (Cameo)",2,0,2,1,0,1,50
+"p297","Andy Samberg",3.94,474,33,"Actor, Director, Producer, Singer (Cameo), Writer",0,3,3,0,2,2,66.7
+"p298","Tom Selleck",3.94,474,67,"Actor, Producer, Singer (Cameo), Writer",2,1,3,0,1,1,33.3
+"p299","Ellen Barkin",3.92,482,58,"Actress",2,6,8,1,6,7,87.5
+"p300","Sam Shepard",3.92,482,68,"Actor",2,0,2,1,0,1,50
+"p301","David Thewlis",3.92,482,49,"Actor, Director",3,0,3,1,0,1,33.3
+"p302","Kristen Bell",3.91,488,32,"Actress, Stage Performer (Musical), Stage Performer (Play)",2,0,2,1,0,1,50
+"p303","Jamie Kennedy",3.9,489,42,"Actor, Producer, Singer (Cameo), Writer",0,5,5,0,3,3,60
+"p304","Virginia Madsen",3.9,489,50,"Actress, Producer",3,0,3,1,0,1,33.3
+"p305","Adam Brody",3.89,493,32,"Actor, Producer, Writer",0,3,3,0,2,2,66.7
+"p306","Jeff Goldblum",3.87,497,59,"Actor, Director, Producer, Singer (Cameo)",2,6,8,1,2,3,37.5
+"p307","Chris Klein",3.85,501,33,"Actor, Singer (Cameo)",0,2,2,0,2,2,100
+"p308","Gillian Anderson",3.82,506,43,"Actress",3,1,4,0,1,1,25
+"p309","André 3000",3.81,509,37,"Actor, Musician, Producer, Rapper, Singer",0,3,3,0,1,1,33.3
+"p310","Neve Campbell",3.81,509,38,"Actress, Dancer, Producer, Singer (Cameo), Writer",2,2,4,0,2,2,50
+"p311","Brooke Shields",3.8,511,47,"Actress",2,8,10,0,4,4,40
+"p312","Anthony Edwards",3.79,512,50,"Actor, Director, Producer",1,1,2,0,1,1,50
+"p313","Jamie Lee Curtis",3.78,515,53,"Actress, Author, Director",1,3,4,1,1,2,50
+"p314","Geena Davis",3.78,515,56,"Actress, Producer, Singer (Cameo), Writer",4,4,8,1,4,5,62.5
+"p316","Joshua Jackson",3.76,521,34,"Actor, Director, Producer",1,6,7,1,4,5,71.4
+"p317","Daniel Auteuil",3.75,524,62,"Actor",3,0,3,1,0,1,33.3
+"p318","Kim Cattrall",3.75,524,55,"Actress, Producer",4,4,8,0,2,2,25
+"p319","Emilio Estevez",3.75,524,50,"Actor, Director, Producer, Singer (Cameo), Writer",1,10,11,0,3,3,27.3
+"p320","Famke Janssen",3.74,527,46,"Actress",1,2,3,0,2,2,66.7
+"p321","Rufus Sewell",3.74,527,44,"Actor",2,2,4,0,2,2,50
+"p323","Calista Flockhart",3.73,529,47,"Actress",1,3,4,1,2,3,75
+"p325","Rhys Ifans",3.71,533,44,"Actor, Singer (Cameo)",0,2,2,0,1,1,50
+"p326","Christina Applegate",3.7,536,40,"Actress, Producer",2,6,8,1,2,3,37.5
+"p327","Dan Aykroyd",3.69,537,60,"Actor, Director, Producer, Writer",1,1,2,0,1,1,50
+"p328","Kelly Preston",3.68,540,49,"Actress",3,2,5,2,1,3,60
+"p329","Eric Stoltz",3.66,542,50,"Actor",0,11,11,0,6,6,54.5
+"p330","Teri Hatcher",3.65,545,47,"Actress, Writer",2,7,9,0,4,4,44.4
+"p331","Rachel Griffiths",3.63,546,43,"Actress, Director, Writer",1,3,4,0,2,2,50
+"p332","Chris Noth",3.61,551,57,"Actor, Producer, Writer",1,2,3,0,1,1,33.3
+"p333","Blake Lively",3.6,555,24,"Actress",0,2,2,0,1,1,50
+"p334","Kyle MacLachlan",3.59,558,53,"Actor, Director, Singer (Cameo)",2,2,4,0,2,2,50
+"p335","Elisha Cuthbert",3.56,562,29,"Actress, Producer, Singer (Cameo)",0,7,7,0,2,2,28.6
+"p336","Kristin Davis",3.56,562,47,"Actress, Producer, Singer (Cameo)",0,8,8,0,4,4,50
+"p337","Jennifer Love Hewitt",3.56,562,33,"Actress, Producer, Singer (Cameo), Writer",0,10,10,0,6,6,60
+"p338","Ted Danson",3.54,566,64,"Actor, Producer, Singer (Cameo)",3,1,4,1,0,1,25
+"p339","Janet Jackson",3.53,568,46,"Actress, Composer, Producer, Singer, Writer",3,2,5,0,1,1,20
+"p340","David Arquette",3.52,569,40,"Actor, Director, Producer, Writer",1,5,6,1,4,5,83.3
+"p341","Amber Tamblyn",3.51,570,29,"Actress",0,2,2,0,1,1,50
+"p342","Sanaa Lathan",3.5,572,40,"Actress, Producer",0,6,6,0,3,3,50
+"p343","Freddie Prinze, Jr.",3.5,572,36,"Actor, Producer, Singer (Cameo), Writer",1,2,3,1,1,2,66.7
+"p344","Campbell Scott",3.49,576,51,"Actor, Director, Producer, Writer",2,3,5,0,2,2,40
+"p345","Mary-Kate Olsen",3.48,578,26,"Actress, Producer",0,11,11,0,1,1,9.1
+"p346","Daryl Hannah",3.47,579,51,"Actress, Director, Producer, Writer",0,9,9,0,1,1,11.1
+"p347","Jon Bon Jovi",3.45,581,50,"Actor, Composer, Musician, Singer",1,1,2,0,1,1,50
+"p348","Olivier Martinez",3.44,583,46,"Actor",2,5,7,2,3,5,71.4
+"p349","Raven-Symoné",3.44,583,26,"Actor, Producer, Singer (Cameo)",0,2,2,0,1,1,50
+"p350","Franka Potente",3.42,588,38,"Actress, Director, Singer (Cameo), Writer",0,3,3,0,1,1,33.3
+"p351","Adrian Grenier",3.41,590,36,"Actor, Director, Producer, Writer",0,9,9,0,3,3,33.3
+"p352","Diane Kruger",3.39,595,36,"Actress, Producer",2,1,3,1,0,1,33.3
+"p353","Terence Stamp",3.39,595,73,"Actor",1,1,2,0,1,1,50
+"p354","Chace Crawford",3.37,599,27,"Actor",0,7,7,0,2,2,28.6
+"p355","Lauren Graham",3.37,599,45,"Actress, Producer, Singer (Cameo)",0,9,9,0,5,5,55.6
+"p356","Mena Suvari",3.37,599,33,"Actress",2,2,4,0,1,1,25
+"p358","Hugh Dancy",3.33,609,37,"Actor",1,1,2,1,1,2,100
+"p359","Alicia Silverstone",3.33,609,35,"Actress, Producer",1,2,3,0,2,2,66.7
+"p360","James Brolin",3.32,614,72,"Actor, Director, Producer",3,0,3,1,0,1,33.3
+"p361","Mischa Barton",3.27,623,26,"Actress",0,4,4,0,1,1,25
+"p363","Camilla Belle",3.26,626,25,"Actress",0,3,3,0,1,1,33.3
+"p364","Stuart Townsend",3.25,627,39,"Actor",1,1,2,1,1,2,100
+"p365","Patricia Arquette",3.24,629,44,"Actress",2,3,5,2,2,4,80
+"p366","Juliette Lewis",3.24,629,39,"Actress, Singer (Cameo)",1,7,8,0,6,6,75
+"p367","Noah Wyle",3.24,629,41,"Actor, Director, Producer",1,1,2,0,1,1,50
+"p369","Carmen Electra",3.22,641,40,"Actress, Singer (Cameo)",2,7,9,0,4,4,44.4
+"p370","Chris O'Donnell",3.22,641,42,"Actor, Producer",1,2,3,0,2,2,66.7
+"p371","Paris Hilton",3.21,645,31,"Actress, Musician, Producer",1,17,18,0,7,7,38.9
+"p372","Malcolm McDowell",3.21,645,69,"Actor, Producer",3,0,3,1,0,1,33.3
+"p373","Matt LeBlanc",3.19,652,45,"Actor, Producer, Singer (Cameo)",1,2,3,0,1,1,33.3
+"p374","Julian McMahon",3.19,652,43,"Actor, Producer",2,1,3,1,0,1,33.3
+"p375","Emmanuelle Béart",3.18,656,48,"Actress",2,0,2,1,0,1,50
+"p376","Vivica A. Fox",3.18,656,47,"Actress, Producer",1,5,6,0,2,2,33.3
+"p378","Christopher Lambert",3.16,666,55,"Actor, Producer, Writer",3,2,5,2,0,2,40
+"p379","Jaime Pressly",3.16,666,34,"Actress, Producer, Singer (Cameo)",1,7,8,0,1,1,12.5
+"p380","Will Arnett",3.15,671,42,"Actor",2,0,2,2,0,2,100
+"p381","Hank Azaria",3.15,671,48,"Actor, Director, Producer, Voice (Animated project), Writer",3,1,4,1,0,1,25
+"p382","Kevin Pollak",3.15,671,54,"Actor, Producer, Writer",1,1,2,0,1,1,50
+"p383","Amy Smart",3.15,671,36,"Actress",1,2,3,0,1,1,33.3
+"p384","Leelee Sobieski",3.15,671,29,"Actress",1,2,3,0,1,1,33.3
+"p385","Wilmer Valderrama",3.15,671,32,"Actor",0,17,17,0,9,9,52.9
+"p387","Alyssa Milano",3.13,680,39,"Actress, Producer",2,16,18,0,5,5,27.8
+"p388","Joy Bryant",3.12,683,35,"Actress, Model",1,2,3,0,1,1,33.3
+"p389","Omar Epps",3.12,683,39,"Actor, Composer, Producer, Writer",1,1,2,0,1,1,50
+"p390","Ben Foster",3.12,683,31,"Actor",0,5,5,0,4,4,80
+"p391","Thomas Jane",3.12,683,43,"Actor, Director, Producer",2,1,3,1,1,2,66.7
+"p392","Frankie Muniz",3.12,683,26,"Actor, Producer, Writer",0,2,2,0,2,2,100
+"p393","Michael Vartan",3.12,683,43,"Actor",1,2,3,0,1,1,33.3
+"p394","Gina Gershon",3.11,691,50,"Actress, Producer, Singer (Cameo)",0,9,9,0,5,5,55.6
+"p395","Ashley Olsen",3.11,691,26,"Actress, Producer",1,6,7,1,2,3,42.9
+"p396","Jonny Lee Miller",3.1,694,39,"Actor, Singer (Cameo)",2,4,6,1,1,2,33.3
+"p398","Erika Christensen",3.09,696,29,"Actress, Singer (Cameo)",0,2,2,0,1,1,50
+"p399","Natasha Henstridge",3.09,696,37,"Actress, Singer (Cameo)",3,1,4,0,1,1,25
+"p400","Jerry O'Connell",3.09,696,38,"Actor, Director, Producer, Writer",1,6,7,1,2,3,42.9
+"p401","Neil Patrick Harris",3.07,702,39,"Actor, Singer (Cameo)",1,1,2,0,1,1,50
+"p403","Jeremy Sisto",3.07,702,37,"Actor",2,5,7,0,2,2,28.6
+"p404","Vanessa L. Williams",3.06,709,49,"Actress",2,7,9,0,1,1,11.1
+"p405","Lara Flynn Boyle",3.05,712,42,"Actress",0,9,9,0,6,6,66.7
+"p406","Timothy Hutton",3.03,717,51,"Actor, Director, Producer, Singer (Cameo), Writer",2,6,8,1,4,5,62.5
+"p407","Dax Shepard",3.03,717,37,"Actor",1,4,5,1,1,2,40
+"p408","Shane West",3.03,717,34,"Actor",0,10,10,0,5,5,50
+"p410","Michael Sheen",3,731,43,"Actor, Producer",3,0,3,2,0,2,66.7
+"p411","Janeane Garofalo",2.98,741,47,"Actress, Director, Producer, Singer (Cameo), Writer",1,1,2,0,1,1,50
+"p412","Pamela Anderson",2.97,745,45,"Actress, Producer",3,18,21,0,5,5,23.8
+"p414","Sophie Marceau",2.96,750,45,"Actress, Director, Writer",3,0,3,1,0,1,33.3
+"p415","Connie Nielsen",2.96,750,47,"Actress",1,1,2,0,1,1,50
+"p416","Lili Taylor",2.95,759,45,"Actress",1,5,6,0,5,5,83.3
+"p417","David Boreanaz",2.94,763,43,"Actor, Director, Producer",2,2,4,0,1,1,25
+"p418","Robert Pattinson",2.94,763,26,"Actor",0,3,3,0,2,2,66.7
+"p419","Jeffrey Dean Morgan",2.92,775,46,"Actor",2,0,2,1,0,1,50
+"p420","Orlando Jones",2.91,779,44,"Actor, Producer, Singer (Cameo), Writer",1,1,2,0,1,1,50
+"p421","Burt Reynolds",2.91,779,76,"Actor, Director, Producer, Singer (Cameo), Writer",2,11,13,0,3,3,23.1
+"p422","Jeanne Tripplehorn",2.91,779,49,"Actress",1,1,2,1,1,2,100
+"p423","Peter Krause",2.9,783,46,"Actor, Producer, Singer (Cameo)",0,2,2,0,1,1,50
+"p424","Christine Taylor",2.9,783,40,"Actress",1,3,4,1,2,3,75
+"p425","Leighton Meester",2.89,787,26,"Actress",0,3,3,0,2,2,66.7
+"p426","Chad Michael Murray",2.89,787,30,"Actor, Writer",2,3,5,1,2,3,60
+"p427","Candice Bergen",2.88,791,66,"Actress, Producer",2,9,11,0,3,3,27.3
+"p428","Michael Imperioli",2.88,791,46,"Actor, Director, Producer, Writer",1,1,2,0,1,1,50
+"p429","Lou Diamond Phillips",2.88,791,50,"Actor, Director, Producer, Singer (Cameo), Writer",3,1,4,0,1,1,25
+"p433","Colin Hanks",2.85,811,34,"Actor, Producer, Singer (Cameo)",1,1,2,0,1,1,50
+"p434","Ali Larter",2.85,811,36,"Actress, Producer",1,3,4,0,1,1,25
+"p435","Macaulay Culkin",2.84,817,31,"Actor, Singer (Cameo)",1,1,2,0,1,1,50
+"p436","Danny Huston",2.84,817,50,"Actor, Director",2,0,2,1,0,1,50
+"p437","Matthew Lillard",2.84,817,42,"Actor, Producer, Singer (Cameo)",1,2,3,0,2,2,66.7
+"p438","Benjamin McKenzie",2.83,827,33,"Actor",0,5,5,0,3,3,60
+"p440","Michelle Rodriguez",2.82,829,34,"Actress, Producer",0,7,7,0,5,5,71.4
+"p441","Milo Ventimiglia",2.82,829,35,"Actor",0,4,4,0,4,4,100
+"p442","Jaime King",2.81,838,33,"Actress",1,6,7,0,4,4,57.1
+"p443","Debra Winger",2.81,838,57,"Actress",2,5,7,1,2,3,42.9
+"p444","Asia Argento",2.8,842,36,"Actress",1,5,6,0,3,3,50
+"p445","Vincent Phillip D'Onofrio",2.79,846,53,"Actor, Director, Producer",2,0,2,1,0,1,50
+"p448","Kristen Stewart",2.77,855,22,"Actress",0,2,2,0,2,2,100
+"p449","David Carradine",2.72,873,75,"Actor, Composer, Director, Producer, Singer (Cameo), Writer",6,0,6,1,0,1,16.7
+"p450","Martin Freeman",2.72,873,40,"Actor",1,1,2,0,1,1,50
+"p451","Crispin Glover",2.72,873,48,"Actor, Director, Producer, Singer (Cameo), Writer",0,2,2,0,1,1,50
+"p452","Mary Steenburgen",2.72,873,59,"Actress",2,0,2,2,0,2,100
+"p453","Craig Bierko",2.71,882,47,"Actor, Stage Performer (Musical)",0,2,2,0,2,2,100
+"p454","January Jones",2.71,882,34,"Actress",0,3,3,0,2,2,66.7
+"p455","Jenny McCarthy",2.71,882,39,"Actress, Producer, Writer",1,2,3,0,1,1,33.3
+"p456","Scott Caan",2.69,890,35,"Actor, Director, Producer, Writer",0,2,2,0,1,1,50
+"p457","Greta Scacchi",2.67,896,52,"Actress",2,0,2,1,0,1,50
+"p461","Faye Dunaway",2.63,923,71,"Actress, Director, Producer, Writer",3,1,4,0,1,1,25
+"p462","Piper Perabo",2.63,923,35,"Actress",0,2,2,0,2,2,100
+"p463","Rachael Leigh Cook",2.62,926,32,"Actress, Producer",1,10,11,0,6,6,54.5
+"p464","Vincent Gallo",2.62,926,51,"Actor, Director",0,5,5,0,3,3,60
+"p466","Ed Westwick",2.62,926,25,"Actor",0,3,3,0,2,2,66.7
+"p467","Jennifer Tilly",2.6,934,53,"Actress",2,3,5,0,2,2,40
+"p468","Jordana Brewster",2.59,936,32,"Actress",1,3,4,0,2,2,50
+"p469","Claire Forlani",2.59,936,40,"Actress, Producer",1,6,7,1,6,7,100
+"p470","Sandrine Bonnaire",2.58,940,45,"Actress, Director, Writer",2,0,2,1,0,1,50
+"p471","Alyson Hannigan",2.57,941,38,"Actress, Singer (Cameo)",1,2,3,0,1,1,33.3
+"p472","Cybill Shepherd",2.57,941,62,"Actress, Producer, Writer",4,2,6,0,1,1,16.7
+"p474","Meagan Good",2.56,948,30,"Actress, Producer",1,2,3,0,1,1,33.3
+"p475","Jill Clayburgh",2.55,951,68,"Actress, Singer (Cameo), Stage Performer (Musical)",1,1,2,0,1,1,50
+"p476","Ginnifer Goodwin",2.55,951,34,"Actress",0,5,5,0,4,4,80
+"p478","Penn Dayton Badgley",2.54,959,25,"Actor",0,2,2,0,1,1,50
+"p480","Don Johnson",2.53,969,62,"Actor, Composer, Director, Producer, Singer, Writer",3,3,6,1,1,2,33.3
+"p481","Idris Elba",2.5,976,39,"Actor",1,1,2,0,1,1,50
+"p482","Edward Furlong",2.5,976,34,"Actor",2,4,6,1,1,2,33.3
+"p483","Bai Ling",2.5,976,41,"Actress, Producer",0,8,8,0,2,2,25
+"p486","James Van Der Beek",2.48,986,35,"Actor",2,1,3,0,1,1,33.3
+"p487","Stephen Dorff",2.47,995,38,"Actor, Producer",0,7,7,0,1,1,14.3
+"p488","Carrie Fisher",2.47,995,55,"Actress, Producer, Singer (Cameo), Writer",2,4,6,0,2,2,33.3
+"p489","Anna Friel",2.46,997,36,"Actress",1,1,2,1,1,2,100
+"p491","Maggie Q",2.43,1002,33,"Actor, Producer",0,2,2,0,1,1,50
+"p494","Penelope Ann Miller",2.41,1007,48,"Actress",2,1,3,1,1,2,66.7
+"p495","Estella Warren",2.4,1015,33,"Actress",0,8,8,0,5,5,62.5
+"p496","Eliza Dushku",2.39,1016,31,"Actress, Producer",1,3,4,0,1,1,25
+"p497","Amber Valletta",2.39,1016,38,"Actress",3,1,4,0,1,1,25
+"p499","Jonathan Silverman",2.37,1028,45,"Actor",1,3,4,0,2,2,50
+"p500","Mimi Rogers",2.35,1037,56,"Actress, Producer",3,4,7,1,2,3,42.9
+"p501","Jason Behr",2.34,1042,38,"Actor",1,4,5,0,2,2,40
+"p502","Sophia Bush",2.34,1042,30,"Actress",1,8,9,1,2,3,33.3
+"p503","Bobby Cannavale",2.33,1047,41,"Actor, Singer (Cameo)",1,2,3,0,2,2,66.7
+"p504","Danny Masterson",2.33,1047,36,"Actor, Producer, Singer (Cameo)",1,4,5,1,1,2,40
+"p505","Damian Lewis",2.3,1059,41,"Actress, Producer",1,1,2,0,1,1,50
+"p507","Olga Kurylenko",2.28,1068,32,"Actress, Writer",2,1,3,0,1,1,33.3
+"p508","Nia Long",2.28,1068,41,"Actress, Singer (Cameo)",2,11,13,0,5,5,38.5
+"p509","Michael Pitt",2.28,1068,31,"Actor, Musician, Singer (Cameo)",0,3,3,0,1,1,33.3
+"p510","Jennifer Esposito",2.27,1074,39,"Actress, Singer (Cameo)",1,5,6,1,3,4,66.7
+"p511","Frances Fisher",2.27,1074,60,"Actress",2,0,2,1,0,1,50
+"p513","Dwight Yoakam",2.26,1080,55,"Actor, Musician",0,3,3,0,2,2,66.7
+"p514","Embeth Davidtz",2.23,1088,46,"Actress",2,0,2,1,0,1,50
+"p515","Tate Donovan",2.23,1088,48,"Actor, Director",1,5,6,0,3,3,50
+"p516","Samantha Mathis",2.22,1092,42,"Actress, Singer (Cameo)",0,6,6,0,4,4,66.7
+"p518","Denise Richards",2.19,1104,41,"Actress",1,8,9,1,4,5,55.6
+"p519","Brooke Langton",2.17,1111,41,"Actress, Producer",2,2,4,0,1,1,25
+"p520","Jenna Dewan",2.16,1115,31,"Actress, Dancer, Model",1,2,3,1,2,3,100
+"p521","Christopher Masterson",2.16,1115,32,"Actor, Director, Producer",1,3,4,1,3,4,100
+"p522","Alicia Witt",2.16,1115,36,"Actress",0,2,2,0,1,1,50
+"p523","Dean Cain",2.15,1122,45,"Director, Producer, Writer",2,5,7,0,3,3,42.9
+"p524","Anne Heche",2.14,1128,43,"Actress, Director, Producer, Writer",3,5,8,0,1,1,12.5
+"p525","Kristanna Loken",2.14,1128,32,"Actress, Producer",1,1,2,0,1,1,50
+"p526","Bijou Phillips",2.14,1128,32,"Actress, Singer",1,9,10,1,2,3,30
+"p527","Vinessa Shaw",2.14,1128,36,"Actress",0,2,2,0,1,1,50
+"p528","Leland Orser",2.13,1135,51,"Actor, Director, Writer",2,0,2,1,0,1,50
+"p529","Joey Lauren Adams",2.1,1141,44,"Actress, Director, Writer",0,4,4,0,2,2,50
+"p530","Elliott Gould",2.1,1141,73,"Actor, Producer, Singer (Cameo)",2,0,2,1,0,1,50
+"p531","Kris Kristofferson",2.1,1141,76,"Actor, Musician",3,2,5,0,1,1,20
+"p532","Shemar Moore",2.09,1150,42,"Actor",1,3,4,0,2,2,50
+"p534","Corbin Bleu",2.07,1159,23,"Actor, Dancer, Model, Singer",0,5,5,0,2,2,40
+"p535","Balthazar Getty",2.07,1159,37,"Actor, Producer",1,3,4,0,3,3,75
+"p536","Barbara Hershey",2.07,1159,64,"Actress",3,1,4,1,1,2,50
+"p537","Gabrielle Anwar",2.06,1165,42,"Actress",2,0,2,1,0,1,50
+"p539","Elias Koteas",2.06,1165,51,"Actor",1,1,2,0,1,1,50
+"p540","David Cross",2.04,1175,48,"Actor, Director, Producer, Writer",0,3,3,0,2,2,66.7
+"p541","Natasha Lyonne",2.04,1175,33,"Actress, Producer",1,1,2,1,1,2,100
+"p542","Laura Prepon",2.03,1179,32,"Actress, Producer, Singer (Cameo)",1,1,2,1,1,2,100
+"p543","Donald Faison",1.99,1191,38,"Actor, Singer (Cameo)",2,2,4,0,1,1,25
+"p544","Kevin Ian Pardue",1.99,1191,35,"Actor, Singer (Cameo), Writer",0,3,3,0,3,3,100
+"p545","Breckin Meyer",1.98,1197,38,"Actor, Singer (Cameo), Writer",1,1,2,0,1,1,50
+"p546","Johnathon Schaech",1.96,1199,42,"Actor, Director, Producer, Writer",2,0,2,1,0,1,50
+"p547","Lauren Holly",1.95,1202,48,"Actress, Producer",3,3,6,1,3,4,66.7
+"p549","Ione Skye",1.94,1207,41,"Actress",3,3,6,0,1,1,16.7
+"p550","Maya Rudolph",1.93,1211,40,"Actress, Comedian",1,2,3,0,1,1,33.3
+"p551","Jason London",1.91,1214,39,"Actor, Producer",2,4,6,0,3,3,50
+"p552","Michael Rapaport",1.91,1214,42,"Actor, Director, Producer",1,1,2,0,1,1,50
+"p553","Bruce Dern",1.89,1225,76,"Actor",3,0,3,1,0,1,33.3
+"p554","Robin Givens",1.89,1225,47,"Actress",2,12,14,0,7,7,50
+"p556","Annabella Sciorra",1.88,1233,52,"Actress, Producer",1,2,3,0,1,1,33.3
+"p557","Jeremy London",1.86,1240,39,"Actor, Director, Producer, Writer",3,1,4,0,1,1,25
+"p558","Rashida Jones",1.85,1241,36,"Actress, Producer, Singer (Cameo)",0,7,7,0,4,4,57.1
+"p559","Minka Kelly",1.78,1255,32,"Actress",0,4,4,0,2,2,50
+"p560","Oliver Hudson",1.77,1259,35,"Actor, Producer",1,1,2,0,1,1,50
+"p561","Olivia Williams",1.76,1261,43,"Actress",1,2,3,0,1,1,33.3
+"p562","Beverly D'Angelo",1.67,1277,60,"Actress, Producer, Singer (Cameo)",3,6,9,1,0,1,11.1
+"p563","Steven Bauer",1.65,1283,55,"Actor, Producer",3,0,3,1,0,1,33.3
+"p565","Jason Lewis",1.64,1289,41,"Actor, Model",0,3,3,0,1,1,33.3
+"p568","Tara Reid",1.6,1299,36,"Actress, Producer",1,14,15,0,1,1,6.7
+"p569","Laetitia Casta",1.57,1307,34,"Actress, Model",2,1,3,0,1,1,33.3
+"p570","Alex Kingston",1.57,1307,49,"Actress",2,0,2,1,0,1,50
+"p571","Diane Ladd",1.53,1317,79,"Actress, Director, Producer, Writer",3,0,3,1,0,1,33.3
+"p572","Rachel Nichols",1.5,1325,32,"Actress",1,1,2,0,1,1,50
+"p573","Rumer Willis",1.49,1328,23,"Actress",0,2,2,0,1,1,50
+"p575","Brooke Burns",1.35,1359,34,"Actress, Model",1,2,3,1,1,2,66.7
+"p577","Kathleen Quinlan",1.23,1374,57,"Actress",1,1,2,0,1,1,50
+"p579","Ashley Scott",1.18,1381,35,"Actress",1,6,7,0,6,6,85.7
+"p581","Mary Lynn Rajskub",1.14,1388,41,"Actor, Singer (Cameo), Writer",1,3,4,0,1,1,25
+"p582","Lynn Collins",1.04,1394,33,"Actress",1,1,2,1,1,2,100
+"p584","Kevin Connolly",2.87,799,38,"Actor, Director",0,2,2,0,0,0,0
+"p586","Chris Evans",3.94,474,31,"Actor",3,0,3,0,0,0,0
