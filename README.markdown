@@ -8,6 +8,6 @@ _(Celbrities determined by Forbes top 1400)_
 _old version_
 
 # TODO
-* fixed parsing script
+* fix parsing script
 * come up with more variables? (up/down movements in age/rank)
 * find a story...

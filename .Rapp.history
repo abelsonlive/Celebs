@@ -1,1018 +1,250 @@
+}
+}
+}
+print(s)
+dts
+ms
+s = 6
+rows <- (vecs[s]:(vecs[(s+1)]-1))
+actor <- try(d[rows, ])
+name = actor$name[1]
+name = gsub(" ", "_", name)
+clean spouses
+spouses <- gsub(" ", "_",unique(actor$spouse[which(actor$spouse!="")]))
+spouses <- spouses[which(spouses!=name)]
+match top 1400
+arg1 <- spouses %in% top1400
+spouses1400  = spouses[arg1]
+clean dated
+dated <- c(actor$dated, actor$canoodled, actor$breakup)
+dated <- gsub(" ", "_",unique(dated[which(dated!="")]))
+dated <- dated[which(dated!=name)]
+remove matches with spouses
+arg2   <- !dated %in% spouses
+dated =  dated[arg2]
+match top 1400
+arg3 <- dated %in% top1400
+dated1400  = dated[arg3]
+compute variables
+ms = length(spouses)
+dts = length(dated)
+ms1400 = length(spouses1400)
+dts1400 = length(dated1400)
+attr$Spouses[s] = ms
+attr$Dated[s] = dts
+attr$Total[s] = ms + dts
+attr$Spouses1400[s] = ms1400
+attr$Dated1400[s] = dts1400
+attr$Total1400[s] = ms1400 + dts1400
+start edge list
+if(s==1){
+edges = data.frame(Source="", Target="",Weight=0)
+for(m in 1:ms){
+mId = attr$Id[which(top == spouses[m])]
+df = data.frame(Source = name,Target = mId,Weight = 2)
+edges = rbind(edges, df)
+}
+for(dt in 1:dts){
+dtId = attr$Id[which(attr$Label == dated[dt])]
+df = data.frame(Source = name,Target = dtId,Weight = 1)
+edges = rbind(edges, df)
+}
+cleanup
+edges <- edges[-1,]
+}
+populate
+if (ms + dts !=  0){
+if(ms != 0){
+for(m in 1:ms){
+dtId = attr$Id[which(attr$Label == dated[m])]
+df = data.frame(Source = name,Target = dtId,Weight = 1)
+edges = rbind(edges, df)
+}
+}
+if(dts != 0){
+for(dt in 1:dts){
+dtId = attr$Id[which(attr$Label == dated[dt])]
+df = data.frame(Source = name,Target = dtId,Weight = 1)
+edges = rbind(edges, df)
+}
+}
+}
+print(s)
+}
+rm(list=ls())
+options(digits=3, stringsAsFactors=F)
 library("stringr")
-neuro = read.csv("~/Dropbox/WD_Tweet_Coding/First Pass/neuroDataByScene.csv", stringsAsFactors=F)
-tweets = read.csv("~/Dropbox/WD_Tweet_Coding/First Pass/part1Coded.csv", stringsAsFactors=F)
-tweets = tweets[which(tweets$SCENE!=""),]
-split = str_split(gsub(" ", "", tweets$SCENE), ",")
-for(i in 1:length(split)){
-scene = split[[i]]
-nscene = length(scene)
-data = tweets[i,-5]
-df = data.frame(matrix(0, nrow=nscene, ncol=11))
-names(df) <- c(names(data), "SCENE")
-for(j in 1:nscene){
-df[j,1:10] <- data
-df[j,11] <- scene[j]
+library("plyr")
+setwd("~/Dropbox/GitRepository/Celebs/")
+read in raw data from google refine
+d <- read.csv("celebs-csv(1).csv", stringsAsFactors=F)
+names(d) <- c("rank", "name", "spouse", "breakup", "dated", "canoodled", "score", "profession", "age")
+all.ppl <- unique(c(d$name, d$spouse, d$dated, d$canoodled))
+all.ppl <- all.ppl[which(all.ppl!="")]
+all.ppl <- gsub(" ", "_", unique(all.ppl))
+get just the forbes top 1400
+vecs <- grep("[0-9]", d$rank)
+n.seeds <- length(vecs)
+get scores:
+Score <- as.numeric(d$score[vecs])
+Rank <- as.numeric(d$rank[vecs])
+Label <- gsub(" ", "_", d$name[vecs])
+get age
+Age <- as.numeric(d$age[vecs])
+get profession
+Profession <- d$profession[vecs]
+i = numeric(n.seeds)
+create attribute df
+attr = data.frame(
+Id = paste("p", 1:n.seeds, sep=""),
+Label,
+Score,
+Rank,
+Age,
+Profession,
+Spouses = i,
+Dated = i,
+Total = i,
+Spouses1400 = i,
+Dated1400 = i,
+Total1400 = i
+)
+get lookup names of top 1400
+top1400 = gsub(" ", "_", attr$Label)
+for (s in 1:n.seeds){
+s = 6
+rows <- (vecs[s]:(vecs[(s+1)]-1))
+actor <- try(d[rows, ])
+name = actor$name[1]
+name = gsub(" ", "_", name)
+clean spouses
+spouses <- gsub(" ", "_",unique(actor$spouse[which(actor$spouse!="")]))
+spouses <- spouses[which(spouses!=name)]
+match top 1400
+arg1 <- spouses %in% top1400
+spouses1400  = spouses[arg1]
+clean dated
+dated <- c(actor$dated, actor$canoodled, actor$breakup)
+dated <- gsub(" ", "_",unique(dated[which(dated!="")]))
+dated <- dated[which(dated!=name)]
+remove matches with spouses
+arg2   <- !dated %in% spouses
+dated =  dated[arg2]
+match top 1400
+arg3 <- dated %in% top1400
+dated1400  = dated[arg3]
+compute variables
+ms = length(spouses)
+dts = length(dated)
+ms1400 = length(spouses1400)
+dts1400 = length(dated1400)
+attr$Spouses[s] = ms
+attr$Dated[s] = dts
+attr$Total[s] = ms + dts
+attr$Spouses1400[s] = ms1400
+attr$Dated1400[s] = dts1400
+attr$Total1400[s] = ms1400 + dts1400
+start edge list
+if(s==1){
+edges = data.frame(Source="", Target="",Weight=0)
+for(m in 1:ms){
+mId = attr$Id[which(top == spouses[m])]
+df = data.frame(Source = name,Target = mId,Weight = 2)
+edges = rbind(edges, df)
 }
-split[[i]] <- df
+for(dt in 1:dts){
+dtId = attr$Id[which(attr$Label == dated[dt])]
+df = data.frame(Source = name,Target = dtId,Weight = 1)
+edges = rbind(edges, df)
 }
-finaldf = split[[1]]
-for(j in 2:length(split)){
-finaldf = rbind(finaldf, split[[j]])
+cleanup
+edges <- edges[-1,]
 }
-finaldf$SENTIMENT = as.numeric(finaldf$SENTIMENT)
-finaldf$INTENSITY = as.numeric(finaldf$INTENSITY)
-finaldf$SCENE = as.integer(finaldf$SCENE)
-finaldf$HUMOR = as.integer(finaldf$HUMOR)
-finaldf$QUOTE = as.integer(finaldf$QUOTE)
-declare variables for loop
-scnid <- neuro$scnid
-n <- length(scnid)
-neuro$ntweets = numeric(length=n)
-neuro$perShow  = numeric(length=n)
-neuro$perPersonal = numeric(length=n)
-neuro$intensity = numeric(length=n)
-neuro$intensitySD = numeric(length=n)
-neuro$perHumor = numeric(length=n)
-neuro$perQuote = numeric(length=n)
-neuro$sentiment = numeric(length=n)
-neuro$sentimentSD = numeric(length=n)
-neuro$nchar = numeric(length=n)
-neuro$perCap = numeric(length=n)
-neuro$perExcl = numeric(length=n)
-neuro$perQues = numeric(length=n)
-loop
-for (k in 1:n){
-df.of.i = finaldf[which(finaldf$SCENE==scnid[k]),]
-ntweets = nrow(df.of.i)
-neuro$ntweets[k] = ntweets
-neuro$perShow[k]  = sum(df.of.i$SHOW)/ ntweets * 100
-neuro$perPersonal[k] = sum(df.of.i$PERSONAL)/ ntweets * 100
-neuro$intensity[k] = mean(df.of.i$INTENSITY)
-neuro$intensitySD[k] = sd(df.of.i$INTENSITY)
-neuro$perHumor[k] = sum(df.of.i$HUMOR)/ ntweets * 100
-neuro$perQuote[k] = sum(df.of.i$QUOTE)/ ntweets * 100
-neuro$sentiment[k] = mean(df.of.i$SENTIMENT)
-neuro$sentimentSD[k] = sd(df.of.i$SENTIMENT)
-split out text
-text = df.of.i$TEXT
-ntext = length(text)
-nchar = numeric(ntext)
-perCap = numeric(ntext)
-perExcl = numeric(ntext)
-perQues = numeric(ntext)
-featuredf = data.frame(perCap, perExcl, perQues)
-for(t in 1:ntext){
-if(length(text)>0){
-nchar = nchar(text[t])
-featuredf$nchar[t] = nchar
-featuredf$perCap[t] = str_count(text[t], "[A-Z]") / nchar * 100
-featuredf$perExcl[t] = str_count(text[t], "!") / nchar * 100
-featuredf$perQues[t] = str_count(text[t], "\\?") / nchar * 100
+populate
+if (ms + dts !=  0){
+if(ms != 0){
+for(m in 1:ms){
+dtId = attr$Id[which(attr$Label == dated[m])]
+df = data.frame(Source = name,Target = dtId,Weight = 1)
+edges = rbind(edges, df)
 }
-neuro$nchar[k] = mean(featuredf$nchar)
-neuro$perCap[k] = mean(featuredf$perCap)
-neuro$perExcl[k] = mean(featuredf$perExcl)
-neuro$perQues[k] = mean(featuredf$perQues)
 }
-neuro[is.na(neuro)] = 0
-neuro$tps = neuro$ntweets/neuro$ntime
-write.csv(neuro, "~/Dropbox/WD_Tweet_Coding/First Pass/allDataByScene.csv", row.names=F)
-warnings()
-show = read.csv("/Users/brian/Dropbox/WD_Tweet_Coding/coded_tweets/WD_SceneObject_Coded_2.csv", stringsAsFactors=F)
-head(show)
-show[is.na(show)] <- 0
-head(show)
-summary(show$shot_type)
-table(shot$type)
-table(show$shot_type)
-source('https://raw.github.com/tlevine/hipstogram/master/hipstogram.r')
-hipstogram(rnorm(42), filename='hipstogram.png')
-source('https://raw.github.com/tlevine/hipstogram/master/hipstogram.r')
-hipstogram <- function(x,
-filename='hipstogram.png', width=1024, height=800,
-...
-) {
-png(filename='.histogram0.png', width=width, height=height)
-hist(x, col=2, ...)
-dev.off()
-P <- 1
-Q <- 0
-r <- function() rnorm(1, mean = 1, sd = 1/12)
-perspective_option <- paste(
-paste(0, ',', 0, ' ', round(width*Q*r()), ',', round(height*Q*r()), sep=''),
-paste(width, ',', 0, ' ', round(width*P*r()), ',', round(height*Q*r()), sep=''),
-paste(0, ',', height, ' ', round(width*Q*r()), ',', round(height*P*r()), sep=''),
-paste(width, ',', height, ' ', round(width*P*r()), ',', round(height*P*r()), sep='')
-)
-options0 <- paste(
-"-distort Perspective '", perspective_option, "'"
-)
-options1 <- paste(
-'-compose over -gravity center',
-'-modulate 100,120',
-'-brightness-contrast 0x20',
-'-sepia-tone 80%',
-'-blur 0x2',
-'-radial-blur 3'
-'-virtual-pixel transparent',
-'-morphology Distance Euclidean:4,3!'
-)
-options2 <- paste(
-'-size',
-paste(width,width,sep='x'),
-'gradient:',
-'-rotate 90',
-"distort Polar '",
-paste(width/2,0,.5,.5,sep=','),
-"' +repage",
-'-flop'
-)
-options3 <- paste(
-'-background white',
-'-channel B',
-'-combine'
-)
-options4 <- paste(
-'-compose blur',
-'-define compose:args=5x0+0+360',
-'-composite'
-)
-options5 <- paste(
-'-blur 0x4',
-'-radial-blur 3'
-)
-system(paste('convert','.histogram0.png',options0,'.histogram1.png'))
-system(paste('convert','.histogram1.png',options1,'.histogram2.png'))
-system(paste('convert',options2, '.polar.png'))
-system(paste('convert','.polar.png',options3,'.blur.png'))
-system(paste('convert','.histogram2.png', '.blur.png', options4, '.histogram3.png'))
-system(paste('convert','.histogram3.png', options4, filename))
-system('rm .histogram[0-3].png .polar.png .blur.png')
+if(dts != 0){
+for(dt in 1:dts){
+dtId = attr$Id[which(attr$Label == dated[dt])]
+df = data.frame(Source = name,Target = dtId,Weight = 1)
+edges = rbind(edges, df)
 }
-hipstogram(rnorm(42), filename='hipstogram.png')
-Sys.getenv("PATH")
-Sys.setenv(PATH=paste("opt/lobal/bin", Sys.getenv("PATH", sep=":")))
-Sys.setenv(PATH=paste("opt/lobal/bin", Sys.getenv("PATH"), sep=":")))
-Sys.setenv(PATH=paste("opt/lobal/bin", Sys.getenv("PATH"), sep=":"))
-hipstogram(rnorm(42), filename='hipstogram.png')
-Sys.setenv(PATH=paste("opt/local/bin", Sys.getenv("PATH"), sep=":"))
-hipstogram(rnorm(42), filename='hipstogram.png')
-perspective_option <- paste(
-paste(0, ',', 0, ' ', round(width*Q*r()), ',', round(height*Q*r()), sep=''),
-paste(width, ',', 0, ' ', round(width*P*r()), ',', round(height*Q*r()), sep=''),
-paste(0, ',', height, ' ', round(width*Q*r()), ',', round(height*P*r()), sep=''),
-paste(width, ',', height, ' ', round(width*P*r()), ',', round(height*P*r()), sep='')
-)
-png(filename='.histogram0.png', width=width, height=height)
-hist(x, col=2, ...)
-dev.off()
-P <- 1
-Q <- 0
-r <- function() rnorm(1, mean = 1, sd = 1/12)
-perspective_option <- paste(
-paste(0, ',', 0, ' ', round(width*Q*r()), ',', round(height*Q*r()), sep=''),
-paste(width, ',', 0, ' ', round(width*P*r()), ',', round(height*Q*r()), sep=''),
-paste(0, ',', height, ' ', round(width*Q*r()), ',', round(height*P*r()), sep=''),
-paste(width, ',', height, ' ', round(width*P*r()), ',', round(height*P*r()), sep='')
-)
-width=1024
-height=800
-P <- 1
-Q <- 0
-r <- function() rnorm(1, mean = 1, sd = 1/12)
-perspective_option <- paste(
-paste(0, ',', 0, ' ', round(width*Q*r()), ',', round(height*Q*r()), sep=''),
-paste(width, ',', 0, ' ', round(width*P*r()), ',', round(height*Q*r()), sep=''),
-paste(0, ',', height, ' ', round(width*Q*r()), ',', round(height*P*r()), sep=''),
-paste(width, ',', height, ' ', round(width*P*r()), ',', round(height*P*r()), sep='')
-)
-perspective_option
-options0 <- paste(#
-    "-distort Perspective '", perspective_option, "'"
-)
-options0
-Sys.setenv(NOAWT=TRUE)
-require("tm")
-require("stringr")
-require("Snowball")
-require("lda")
-rm(list=ls())#
-library("stringr")#
-#
-#read in raw data from google refine#
-d <- read.csv("~/Dropbox/Celeb_Hookups/celebs-csv(1).csv", stringsAsFactors=F)#
-names(d) <- c("rank", "name", "spouse", "breakup", "dated", "canoodled", "score", "profession", "age")#
-all.ppl <- unique(c(d$name, d$spouse, d$dated, d$canoodled))#
-top.n <- 1400#
-#
-all.ppl <- all.ppl[1:top.n]#
-n <- length(all.ppl)#
-#
-# get all people in the data, to be the columns#
-#
-# get just the forbes top 1400#
-vecs <- grep("[0-9]", d$rank)#
-vecs <- vecs[1:top.n]#
-n.seeds <- length(vecs)#
-matrix <- data.frame(matrix(0.00, nrow=n, ncol=n))#
-names(matrix) <- all.ppl#
-row.names(matrix) <- all.ppl#
-# go through each celeb in the top 1400 and assign a value to their relationship#
-#
-for (c in 1:n.seeds){#
-	rows <- (vecs[c]:(vecs[(c+1)]-1))#
-	actor <- try(d[rows, ])#
-	# clean spouses#
-		spouses <- actor$spouse[which(actor$spouse!=actor$name[1])]#
-		spouses <- unique(spouses[which(spouses!="")])#
-		n.spouses <- length(spouses)#
-	# clean dated#
-		dated <- c(actor$dated, actor$canoodled, actor$breakup)#
-		dated <- unique(dated[which(dated != "" & dated != actor$name[1])])#
-		n.dated <- length(dated)#
-#
-	# match dated#
-	if (n.dated > 0){#
-		for(i in 1:n.dated){#
-			match.d <- grep(dated[i], row.names(matrix))#
-			matrix[match.d,c] <- 1.00#
-			matrix[c, match.d] <- 1.00#
-		}#
-	}#
-	# match spouses#
-	if(n.spouses > 0){	#
-		for(s in 1:n.spouses){#
-			match.sp <- grep(spouses[s], names(matrix))#
-			matrix[c,match.sp] <- 5.00#
-			matrix[match.sp,c] <- 5.00#
-		}#
-	}#
-print(paste("step", c, "of", n.seeds))#
 }
-rm(list=ls())#
-options(digits=1)#
-library("stringr")#
-library("plyr")#
-setwd("~/Dropbox/GitRepository/Celebs/")#
-#read in raw data from google refine#
-d <- read.csv("celebs-csv(1).csv", stringsAsFactors=F)#
-names(d) <- c("rank", "name", "spouse", "breakup", "dated", "canoodled", "score", "profession", "age")#
-# all.ppl <- gsub(" ", "_", unique(c(d$name, d$spouse, d$dated, d$canoodled)))#
-# all.ppl <- all.ppl[which(all.ppl!="")]#
-# n = length(all.ppl)#
-# get just the forbes top 1400#
-vecs <- grep("[0-9]", d$rank)#
-n.seeds <- length(vecs)#
-#
-#get scores:#
-Score <- as.numeric(d$score[vecs])#
-Rank <- as.numeric(d$rank[vecs])#
-Label <- gsub(" ", "_", d$name[vecs])#
-# get age#
-Age <- as.numeric(d$age[vecs])#
-# get profession#
-Profession <- d$profession[vecs]#
-i = numeric(n.seeds)#
-# add id#
-attr = data.frame(Label,#
-				  Score,				  			  #
-				  Rank,#
-				  Age,#
-				  Profession,#
-				  Spouses = i,#
-				  Dated = i,#
-				  Total = i,#
-				  Spouses1400 = i,#
-				  Dated1400 = i,#
-				  Total1400 = i,#
-				  stringsAsFactors=F)#
-# get names of top 1400#
-top1400 = as.character(d$name[which(d$name!="")])#
-top1400 = gsub(" ", "_", top1400)#
-#
-for (s in 1:n.seeds){#
-#
-	rows <- (vecs[s]:(vecs[(s+1)]-1))#
-	actor <- try(d[rows, ])#
-	name = actor$name[1]#
-	# clean spouses#
-	spouses <- actor$spouse[which(actor$spouse!=name)]#
-	spouses <- gsub(" ", "_",unique(spouses[which(spouses!="")]))#
-	# match top 1400	#
-	arg1 <- spouses %in% top1400#
-	spouses1400  = spouses[arg1]#
-	# clean dated#
-	dated <- c(actor$dated, actor$canoodled, actor$breakup)#
-	dated <- gsub(" ", "_", unique(dated[which(dated != "" & dated != name)]))#
-	# remove matches with spouses#
-	arg2   <- !dated %in% spouses#
-	dated =  dated[arg2]#
-#
-	# match top 1400#
-	arg3 <- dated %in% top1400#
-	dated1400  = dated[arg3]#
-#
-	#compute variables#
-	ms = length(spouses) #
-	dts = length(dated)#
-	ms1400 = length(spouses1400)#
-	dts1400 = length(dated1400)#
-	attr$Spouses[s] = ms#
-	attr$Dated[s] = dts#
-	attr$Total[s] = ms + dts#
-    attr$Spouses1400[s] = ms1400 #
-    attr$Dated1400[s] = dts1400#
-    attr$Total1400[s] = ms1400 + dts1400#
-    name = gsub(" ", "_", name)#
-# start edge list#
-	if(s == 1){#
-		edges  = data.frame(Source="", #
-							Target="",#
-							Weight=0, #
-							stringsAsFactors=F)#
-		for(m in 1:ms1400){#
-			df = data.frame(Source = name,#
-					  	    Target = spouses1400[m],#
-					        Weight = 2, #
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-		}#
-		for(dt in 1:dts1400){#
-			df = data.frame(Source = name,#
-					  	    Target = dated1400[dt],#
-					        Weight = 1, #
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-		}#
-	}#
-	if(s > 1){#
-#
-		if (ms1400!=0){#
-			for(m in 1:ms1400){#
-			df = data.frame(Source = name,#
-					  	    Target = spouses1400[m],#
-					        Weight = 2, #
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-			}#
-		}#
-		if (dts1400!=0){#
-			for(dt in 1:dts1400){#
-			df = data.frame(Source = name,#
-					  	    Target = dated1400[dt],#
-					        Weight = 1,#
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-#
-			}#
-		}#
-	}#
-}#
-#
-# remove duplicates and other cleanup#
-edges <- edges[-1,]#
-edges$Weight[which(edges$Weight==4)] = 2#
-#
-# create ids for edge list#
-names = unique(c(as.character(edges[,1]), as.character(edges[,2])))#
-n = length(names)#
-id = paste("p", 1:n, sep="")#
-cross = data.frame(Source=names, id_source=id, stringsAsFactors=F)#
-cross2 = data.frame(Target=names, id_target=id, stringsAsFactors=F)#
-edges1 = join(cross, edges, by="Source", type="right")#
-edges2 = join(cross2, edges1, by="Target", type="right")#
-edges = edges2[,-c(1:2)]#
-names(edges) = c("Weight", "Source", "Target")#
-# add direction type#
+}
+print(s)
+}
+create ids for edge list
+names = unique(c(as.character(edges[,1]), as.character(edges[,2])))
+length(names)
+cross = data.frame(Source=names, id_source=Id, stringsAsFactors=F)
+cross2 = data.frame(Target=names, id_target=Id, stringsAsFactors=F)
+edges1 = join(cross, edges, by="Source", type="right")
+edges2 = join(cross2, edges1, by="Target", type="right")
+edges = edges2[,-c(1:2)]
+names(edges) = c("Weight", "Source", "Target")
+add direction type
 edges$Type = "Undirected"
-edges
+create node table
 node = data.frame(Id = id, Label=names, stringsAsFactors=F)
 nodes = join(attr, node, by="Label", type="right", "all")
-nodes$Label = gsub("_", " ", nodes$Label)
 nodes$Label = gsub("_", " ", nodes$Label)
 nodes$Score = as.numeric(nodes$Score)
 nodes$Age = as.integer(nodes$Age)
 per = (nodes$Total1400/ nodes$Total) * 100
-per[is.na(per)] = 0
-nodes$p1400 =  round(per, 1)
-head(nodes()
-)
-head(nodes)
-rm(list=ls())#
-options(digits=1)#
-library("stringr")#
-library("plyr")#
-setwd("~/Dropbox/GitRepository/Celebs/")#
-#read in raw data from google refine#
-d <- read.csv("celebs-csv(1).csv", stringsAsFactors=F)#
-names(d) <- c("rank", "name", "spouse", "breakup", "dated", "canoodled", "score", "profession", "age")#
-# all.ppl <- gsub(" ", "_", unique(c(d$name, d$spouse, d$dated, d$canoodled)))#
-# all.ppl <- all.ppl[which(all.ppl!="")]#
-# n = length(all.ppl)#
-# get just the forbes top 1400#
-vecs <- grep("[0-9]", d$rank)#
-n.seeds <- length(vecs)#
-#
-#get scores:#
-Score <- as.numeric(d$score[vecs])#
-Rank <- as.numeric(d$rank[vecs])#
-Label <- gsub(" ", "_", d$name[vecs])#
-# get age#
-Age <- as.numeric(d$age[vecs])#
-# get profession#
-Profession <- d$profession[vecs]#
-i = numeric(n.seeds)#
-# add id#
-attr = data.frame(Label,#
-				  Score,				  			  #
-				  Rank,#
-				  Age,#
-				  Profession,#
-				  Spouses = i,#
-				  Dated = i,#
-				  Total = i,#
-				  Spouses1400 = i,#
-				  Dated1400 = i,#
-				  Total1400 = i,#
-				  stringsAsFactors=F)#
-# get names of top 1400#
-top1400 = as.character(d$name[which(d$name!="")])#
-top1400 = gsub(" ", "_", top1400)#
-#
-for (s in 1:n.seeds){#
-#
-	rows <- (vecs[s]:(vecs[(s+1)]-1))#
-	actor <- try(d[rows, ])#
-	name = actor$name[1]#
-	# clean spouses#
-	spouses <- actor$spouse[which(actor$spouse!=name)]#
-	spouses <- gsub(" ", "_",unique(spouses[which(spouses!="")]))#
-	# match top 1400	#
-	arg1 <- spouses %in% top1400#
-	spouses1400  = spouses[arg1]#
-	# clean dated#
-	dated <- c(actor$dated, actor$canoodled, actor$breakup)#
-	dated <- gsub(" ", "_", unique(dated[which(dated != "" & dated != name)]))#
-	# remove matches with spouses#
-	arg2   <- !dated %in% spouses#
-	dated =  dated[arg2]#
-#
-	# match top 1400#
-	arg3 <- dated %in% top1400#
-	dated1400  = dated[arg3]#
-#
-	#compute variables#
-	ms = length(spouses) #
-	dts = length(dated)#
-	ms1400 = length(spouses1400)#
-	dts1400 = length(dated1400)#
-	attr$Spouses[s] = ms#
-	attr$Dated[s] = dts#
-	attr$Total[s] = ms + dts#
-    attr$Spouses1400[s] = ms1400 #
-    attr$Dated1400[s] = dts1400#
-    attr$Total1400[s] = ms1400 + dts1400#
-    name = gsub(" ", "_", name)#
-# start edge list#
-	if(s == 1){#
-		edges  = data.frame(Source="", #
-							Target="",#
-							Weight=0, #
-							stringsAsFactors=F)#
-		for(m in 1:ms1400){#
-			df = data.frame(Source = name,#
-					  	    Target = spouses1400[m],#
-					        Weight = 2, #
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-		}#
-		for(dt in 1:dts1400){#
-			df = data.frame(Source = name,#
-					  	    Target = dated1400[dt],#
-					        Weight = 1, #
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-		}#
-	}#
-	if(s > 1){#
-#
-		if (ms1400!=0){#
-			for(m in 1:ms1400){#
-			df = data.frame(Source = name,#
-					  	    Target = spouses1400[m],#
-					        Weight = 2, #
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-			}#
-		}#
-		if (dts1400!=0){#
-			for(dt in 1:dts1400){#
-			df = data.frame(Source = name,#
-					  	    Target = dated1400[dt],#
-					        Weight = 1,#
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-#
-			}#
-		}#
-	}#
-}#
-#
-# remove duplicates and other cleanup#
-edges <- edges[-1,]#
-edges$Weight[which(edges$Weight==4)] = 2#
-#
-# create ids for edge list#
-names = unique(c(as.character(edges[,1]), as.character(edges[,2])))#
-n = length(names)#
-id = paste("p", 1:n, sep="")#
-cross = data.frame(Source=names, id_source=id, stringsAsFactors=F)#
-cross2 = data.frame(Target=names, id_target=id, stringsAsFactors=F)#
-edges1 = join(cross, edges, by="Source", type="right")#
-edges2 = join(cross2, edges1, by="Target", type="right")#
-edges = edges2[,-c(1:2)]#
-names(edges) = c("Weight", "Source", "Target")#
-# add direction type#
-edges$Type = "Undirected"#
-#create node table#
-node = data.frame(Id = id, Label=names, stringsAsFactors=F)#
-nodes = join(attr, node, by="Label", type="right", "all")#
-nodes$Label = gsub("_", " ", nodes$Label)#
-nodes$Score = as.numeric(nodes$Score)#
-nodes$Age = as.integer(nodes$Age)#
-per = (nodes$Total1400/ nodes$Total) * 100#
-per[is.na(per)] = 0.00#
+per[is.na(per)] = 0.00
 nodes$p1400 =  round(per, 3)
-nodes
-nodes
+subset node and edges by people who have at least one connection
 nodes = nodes[which(nodes$Total>1),]
 final_ids = nodes$Id
-summary(final_ids)
-final_ids
-arg4 = final_ids %in% edges$Target
-arg4
-edges = edges[arg4,]
-edges
-subset node and edges by people who have at least one connection#
-nodes = nodes[which(nodes$Total>1),]#
-final_ids = nodes$Id#
-arg4 = final_ids %in% edges$Target#
-edges = edges[arg4,]#
-arg5 = edges$Target %in% final_ids#
-nodes = nodes[arg5,]
-nodes
-arg5 = edges$Target %in% final_ids
-arg5
-rm(list=ls())#
-options(digits=1)#
-library("stringr")#
-library("plyr")#
-setwd("~/Dropbox/GitRepository/Celebs/")#
-#read in raw data from google refine#
-d <- read.csv("celebs-csv(1).csv", stringsAsFactors=F)#
-names(d) <- c("rank", "name", "spouse", "breakup", "dated", "canoodled", "score", "profession", "age")#
-# all.ppl <- gsub(" ", "_", unique(c(d$name, d$spouse, d$dated, d$canoodled)))#
-# all.ppl <- all.ppl[which(all.ppl!="")]#
-# n = length(all.ppl)#
-# get just the forbes top 1400#
-vecs <- grep("[0-9]", d$rank)#
-n.seeds <- length(vecs)#
-#
-#get scores:#
-Score <- as.numeric(d$score[vecs])#
-Rank <- as.numeric(d$rank[vecs])#
-Label <- gsub(" ", "_", d$name[vecs])#
-# get age#
-Age <- as.numeric(d$age[vecs])#
-# get profession#
-Profession <- d$profession[vecs]#
-i = numeric(n.seeds)#
-# add id#
-attr = data.frame(Label,#
-				  Score,				  			  #
-				  Rank,#
-				  Age,#
-				  Profession,#
-				  Spouses = i,#
-				  Dated = i,#
-				  Total = i,#
-				  Spouses1400 = i,#
-				  Dated1400 = i,#
-				  Total1400 = i,#
-				  stringsAsFactors=F)#
-# get names of top 1400#
-top1400 = as.character(d$name[which(d$name!="")])#
-top1400 = gsub(" ", "_", top1400)#
-#
-for (s in 1:n.seeds){#
-#
-	rows <- (vecs[s]:(vecs[(s+1)]-1))#
-	actor <- try(d[rows, ])#
-	name = actor$name[1]#
-	# clean spouses#
-	spouses <- actor$spouse[which(actor$spouse!=name)]#
-	spouses <- gsub(" ", "_",unique(spouses[which(spouses!="")]))#
-	# match top 1400	#
-	arg1 <- spouses %in% top1400#
-	spouses1400  = spouses[arg1]#
-	# clean dated#
-	dated <- c(actor$dated, actor$canoodled, actor$breakup)#
-	dated <- gsub(" ", "_", unique(dated[which(dated != "" & dated != name)]))#
-	# remove matches with spouses#
-	arg2   <- !dated %in% spouses#
-	dated =  dated[arg2]#
-#
-	# match top 1400#
-	arg3 <- dated %in% top1400#
-	dated1400  = dated[arg3]#
-#
-	#compute variables#
-	ms = length(spouses) #
-	dts = length(dated)#
-	ms1400 = length(spouses1400)#
-	dts1400 = length(dated1400)#
-	attr$Spouses[s] = ms#
-	attr$Dated[s] = dts#
-	attr$Total[s] = ms + dts#
-    attr$Spouses1400[s] = ms1400 #
-    attr$Dated1400[s] = dts1400#
-    attr$Total1400[s] = ms1400 + dts1400#
-    name = gsub(" ", "_", name)#
-# start edge list#
-	if(s == 1){#
-		edges  = data.frame(Source="", #
-							Target="",#
-							Weight=0, #
-							stringsAsFactors=F)#
-		for(m in 1:ms1400){#
-			df = data.frame(Source = name,#
-					  	    Target = spouses1400[m],#
-					        Weight = 2, #
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-		}#
-		for(dt in 1:dts1400){#
-			df = data.frame(Source = name,#
-					  	    Target = dated1400[dt],#
-					        Weight = 1, #
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-		}#
-	}#
-	if(s > 1){#
-#
-		if (ms1400!=0){#
-			for(m in 1:ms1400){#
-			df = data.frame(Source = name,#
-					  	    Target = spouses1400[m],#
-					        Weight = 2, #
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-			}#
-		}#
-		if (dts1400!=0){#
-			for(dt in 1:dts1400){#
-			df = data.frame(Source = name,#
-					  	    Target = dated1400[dt],#
-					        Weight = 1,#
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-#
-			}#
-		}#
-	}#
-}#
-#
-# remove duplicates and other cleanup#
-edges <- edges[-1,]#
-edges$Weight[which(edges$Weight==4)] = 2#
-#
-# create ids for edge list#
-names = unique(c(as.character(edges[,1]), as.character(edges[,2])))#
-n = length(names)#
-id = paste("p", 1:n, sep="")#
-cross = data.frame(Source=names, id_source=id, stringsAsFactors=F)#
-cross2 = data.frame(Target=names, id_target=id, stringsAsFactors=F)#
-edges1 = join(cross, edges, by="Source", type="right")#
-edges2 = join(cross2, edges1, by="Target", type="right")#
-edges = edges2[,-c(1:2)]#
-names(edges) = c("Weight", "Source", "Target")#
-# add direction type#
-edges$Type = "Undirected"#
-#create node table#
-node = data.frame(Id = id, Label=names, stringsAsFactors=F)#
-nodes = join(attr, node, by="Label", type="right", "all")#
-nodes$Label = gsub("_", " ", nodes$Label)#
-nodes$Score = as.numeric(nodes$Score)#
-nodes$Age = as.integer(nodes$Age)#
-per = (nodes$Total1400/ nodes$Total) * 100#
-per[is.na(per)] = 0.00#
-nodes$p1400 =  round(per, 3)#
-head(nodes()#
-# subset node and edges by people who have at least one connection#
-nodes = nodes[which(nodes$Total>1),]#
-final_ids = nodes$Id#
-arg4 = final_ids %in% edges$Target#
-edges = edges[arg4,]
-rm(list=ls())#
-options(digits=1)#
-library("stringr")#
-library("plyr")#
-setwd("~/Dropbox/GitRepository/Celebs/")#
-#read in raw data from google refine#
-d <- read.csv("celebs-csv(1).csv", stringsAsFactors=F)#
-names(d) <- c("rank", "name", "spouse", "breakup", "dated", "canoodled", "score", "profession", "age")#
-# all.ppl <- gsub(" ", "_", unique(c(d$name, d$spouse, d$dated, d$canoodled)))#
-# all.ppl <- all.ppl[which(all.ppl!="")]#
-# n = length(all.ppl)#
-# get just the forbes top 1400#
-vecs <- grep("[0-9]", d$rank)#
-n.seeds <- length(vecs)#
-#
-#get scores:#
-Score <- as.numeric(d$score[vecs])#
-Rank <- as.numeric(d$rank[vecs])#
-Label <- gsub(" ", "_", d$name[vecs])#
-# get age#
-Age <- as.numeric(d$age[vecs])#
-# get profession#
-Profession <- d$profession[vecs]#
-i = numeric(n.seeds)#
-# add id#
-attr = data.frame(Label,#
-				  Score,				  			  #
-				  Rank,#
-				  Age,#
-				  Profession,#
-				  Spouses = i,#
-				  Dated = i,#
-				  Total = i,#
-				  Spouses1400 = i,#
-				  Dated1400 = i,#
-				  Total1400 = i,#
-				  stringsAsFactors=F)#
-# get names of top 1400#
-top1400 = as.character(d$name[which(d$name!="")])#
-top1400 = gsub(" ", "_", top1400)#
-#
-for (s in 1:n.seeds){#
-#
-	rows <- (vecs[s]:(vecs[(s+1)]-1))#
-	actor <- try(d[rows, ])#
-	name = actor$name[1]#
-	# clean spouses#
-	spouses <- actor$spouse[which(actor$spouse!=name)]#
-	spouses <- gsub(" ", "_",unique(spouses[which(spouses!="")]))#
-	# match top 1400	#
-	arg1 <- spouses %in% top1400#
-	spouses1400  = spouses[arg1]#
-	# clean dated#
-	dated <- c(actor$dated, actor$canoodled, actor$breakup)#
-	dated <- gsub(" ", "_", unique(dated[which(dated != "" & dated != name)]))#
-	# remove matches with spouses#
-	arg2   <- !dated %in% spouses#
-	dated =  dated[arg2]#
-#
-	# match top 1400#
-	arg3 <- dated %in% top1400#
-	dated1400  = dated[arg3]#
-#
-	#compute variables#
-	ms = length(spouses) #
-	dts = length(dated)#
-	ms1400 = length(spouses1400)#
-	dts1400 = length(dated1400)#
-	attr$Spouses[s] = ms#
-	attr$Dated[s] = dts#
-	attr$Total[s] = ms + dts#
-    attr$Spouses1400[s] = ms1400 #
-    attr$Dated1400[s] = dts1400#
-    attr$Total1400[s] = ms1400 + dts1400#
-    name = gsub(" ", "_", name)#
-# start edge list#
-	if(s == 1){#
-		edges  = data.frame(Source="", #
-							Target="",#
-							Weight=0, #
-							stringsAsFactors=F)#
-		for(m in 1:ms1400){#
-			df = data.frame(Source = name,#
-					  	    Target = spouses1400[m],#
-					        Weight = 2, #
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-		}#
-		for(dt in 1:dts1400){#
-			df = data.frame(Source = name,#
-					  	    Target = dated1400[dt],#
-					        Weight = 1, #
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-		}#
-	}#
-	if(s > 1){#
-#
-		if (ms1400!=0){#
-			for(m in 1:ms1400){#
-			df = data.frame(Source = name,#
-					  	    Target = spouses1400[m],#
-					        Weight = 2, #
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-			}#
-		}#
-		if (dts1400!=0){#
-			for(dt in 1:dts1400){#
-			df = data.frame(Source = name,#
-					  	    Target = dated1400[dt],#
-					        Weight = 1,#
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-#
-			}#
-		}#
-	}#
-}#
-#
-# remove duplicates and other cleanup#
-edges <- edges[-1,]#
-edges$Weight[which(edges$Weight==4)] = 2#
-#
-# create ids for edge list#
-names = unique(c(as.character(edges[,1]), as.character(edges[,2])))#
-n = length(names)#
-id = paste("p", 1:n, sep="")#
-cross = data.frame(Source=names, id_source=id, stringsAsFactors=F)#
-cross2 = data.frame(Target=names, id_target=id, stringsAsFactors=F)#
-edges1 = join(cross, edges, by="Source", type="right")#
-edges2 = join(cross2, edges1, by="Target", type="right")#
-edges = edges2[,-c(1:2)]#
-names(edges) = c("Weight", "Source", "Target")#
-# add direction type#
-edges$Type = "Undirected"#
-#create node table#
-node = data.frame(Id = id, Label=names, stringsAsFactors=F)#
-nodes = join(attr, node, by="Label", type="right", "all")#
-nodes$Label = gsub("_", " ", nodes$Label)#
-nodes$Score = as.numeric(nodes$Score)#
-nodes$Age = as.integer(nodes$Age)#
-per = (nodes$Total1400/ nodes$Total) * 100#
-per[is.na(per)] = 0.00#
-nodes$p1400 =  round(per, 3)#
-head(nodes)
-nodes = nodes[which(nodes$Total>1),]
-final_ids = nodes$Id
-arg4 = final_ids %in% edges$Target | final_ids %in% edges$Source
-arg4
 arg4 = !final_ids %in% edges$Target | !final_ids %in% edges$Source
-arg4
 edges = edges[!arg4,]
-edges
-unique(c(edges[,2], edges[,3])
+library("foreign")
+missing = data.frame(
+id = read.delim("missing.txt", sep="	")[,1],
+stringsAsFactors=F
 )
-length(unique(edges[2:3,]))
-n = unique(c(edges[,2], edges[,3])
+missing = join(attr, missing, type='right', by='Id')
+arg5 = edges$Target in% final_ids
+nodes = nodes[arg5,]
+write to file
+write.csv(edges, "edges.csv", row.names=F)
+write.csv(nodes, "nodes.csv", row.names=F)
+library("foreign")
+missing = data.frame(
+id = read.delim("missing.txt", sep="	")[,1],
+stringsAsFactors=F
 )
-n = unique(c(edges[,2], edges[,3]))
-length(n)
-nrow(nodes)
-nodes$id
-nodes$Id
-unique(nodes$Id)
-!nodes$id %in% n
-rm(list=ls())#
-options(digits=1)#
-library("stringr")#
-library("plyr")#
-setwd("~/Dropbox/GitRepository/Celebs/")#
-#read in raw data from google refine#
-d <- read.csv("celebs-csv(1).csv", stringsAsFactors=F)#
-names(d) <- c("rank", "name", "spouse", "breakup", "dated", "canoodled", "score", "profession", "age")#
-# all.ppl <- gsub(" ", "_", unique(c(d$name, d$spouse, d$dated, d$canoodled)))#
-# all.ppl <- all.ppl[which(all.ppl!="")]#
-# n = length(all.ppl)#
-# get just the forbes top 1400#
-vecs <- grep("[0-9]", d$rank)#
-n.seeds <- length(vecs)#
-#
-#get scores:#
-Score <- as.numeric(d$score[vecs])#
-Rank <- as.numeric(d$rank[vecs])#
-Label <- gsub(" ", "_", d$name[vecs])#
-# get age#
-Age <- as.numeric(d$age[vecs])#
-# get profession#
-Profession <- d$profession[vecs]#
-i = numeric(n.seeds)#
-# add id#
-attr = data.frame(Label,#
-				  Score,				  			  #
-				  Rank,#
-				  Age,#
-				  Profession,#
-				  Spouses = i,#
-				  Dated = i,#
-				  Total = i,#
-				  Spouses1400 = i,#
-				  Dated1400 = i,#
-				  Total1400 = i,#
-				  stringsAsFactors=F)#
-# get names of top 1400#
-top1400 = as.character(d$name[which(d$name!="")])#
-top1400 = gsub(" ", "_", top1400)#
-#
-for (s in 1:n.seeds){#
-#
-	rows <- (vecs[s]:(vecs[(s+1)]-1))#
-	actor <- try(d[rows, ])#
-	name = actor$name[1]#
-	# clean spouses#
-	spouses <- actor$spouse[which(actor$spouse!=name)]#
-	spouses <- gsub(" ", "_",unique(spouses[which(spouses!="")]))#
-	# match top 1400	#
-	arg1 <- spouses %in% top1400#
-	spouses1400  = spouses[arg1]#
-	# clean dated#
-	dated <- c(actor$dated, actor$canoodled, actor$breakup)#
-	dated <- gsub(" ", "_", unique(dated[which(dated != "" & dated != name)]))#
-	# remove matches with spouses#
-	arg2   <- !dated %in% spouses#
-	dated =  dated[arg2]#
-#
-	# match top 1400#
-	arg3 <- dated %in% top1400#
-	dated1400  = dated[arg3]#
-#
-	#compute variables#
-	ms = length(spouses) #
-	dts = length(dated)#
-	ms1400 = length(spouses1400)#
-	dts1400 = length(dated1400)#
-	attr$Spouses[s] = ms#
-	attr$Dated[s] = dts#
-	attr$Total[s] = ms + dts#
-    attr$Spouses1400[s] = ms1400 #
-    attr$Dated1400[s] = dts1400#
-    attr$Total1400[s] = ms1400 + dts1400#
-    name = gsub(" ", "_", name)#
-# start edge list#
-	if(s == 1){#
-		edges  = data.frame(Source="", #
-							Target="",#
-							Weight=0, #
-							stringsAsFactors=F)#
-		for(m in 1:ms1400){#
-			df = data.frame(Source = name,#
-					  	    Target = spouses1400[m],#
-					        Weight = 2, #
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-		}#
-		for(dt in 1:dts1400){#
-			df = data.frame(Source = name,#
-					  	    Target = dated1400[dt],#
-					        Weight = 1, #
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-		}#
-	}#
-	if(s > 1){#
-#
-		if (ms1400!=0){#
-			for(m in 1:ms1400){#
-			df = data.frame(Source = name,#
-					  	    Target = spouses1400[m],#
-					        Weight = 2, #
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-			}#
-		}#
-		if (dts1400!=0){#
-			for(dt in 1:dts1400){#
-			df = data.frame(Source = name,#
-					  	    Target = dated1400[dt],#
-					        Weight = 1,#
-					        stringsAsFactors=F)#
-			edges = rbind(edges, df)#
-#
-			}#
-		}#
-	}#
-}#
-#
-# remove duplicates and other cleanup#
-edges <- edges[-1,]#
-edges$Weight[which(edges$Weight==4)] = 2#
-#
-# create ids for edge list#
-names = unique(c(as.character(edges[,1]), as.character(edges[,2])))#
-n = length(names)#
-id = paste("p", 1:n, sep="")#
-cross = data.frame(Source=names, id_source=id, stringsAsFactors=F)#
-cross2 = data.frame(Target=names, id_target=id, stringsAsFactors=F)#
-edges1 = join(cross, edges, by="Source", type="right")#
-edges2 = join(cross2, edges1, by="Target", type="right")#
-edges = edges2[,-c(1:2)]#
-names(edges) = c("Weight", "Source", "Target")#
-# add direction type#
-edges$Type = "Undirected"
+missing = join(attr, missing, type='right', by='Id')
+missing = data.frame(
+Id = read.delim("missing.txt", sep="	")[,1],
+stringsAsFactors=F
+)
+missing = join(attr, missing, type='right', by='Id')
+head(missing)
+c  = read.csv("celebs[nodes].csv", row.names=F)
+c  = read.csv("celebs[nodes].csv", stringsAsFactors=F)
+head(c)
+c$Id
+c
+c = rbind(c[1:519,], missing)
+head(c)
+head(missing)
+c  = read.csv("celebs[nodes].csv", stringsAsFactors=F)
+head(c)
+nrow(missing)
+ncol(missing)
+ncol(c)
+missing$p1400 = 0
+c  = read.csv("celebs[nodes].csv", stringsAsFactors=F)
+c = rbind(c[1:519,], missing)
+write.csv(c, "nodes.csv", row.names=F)
+c$Label = gsub("_", " ", c$Label)
+write.csv(c, "nodes.csv", row.names=F)
+c
+write.csv(c, "nodes.csv", row.names=F)
